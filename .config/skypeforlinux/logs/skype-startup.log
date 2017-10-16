@@ -1,0 +1,226 @@
+[OpenH264] this = 0x0xee77f7de810, Warning:Actual input framerate fAverageFrameRate = 0.000000 is quite different from framerate in setting 60.000000, please check setting or timestamp unit (ms), start_Ts = 3716476279826
+[OpenH264] this = 0x0xee77dd68300, Warning:Actual input framerate fAverageFrameRate = 0.000000 is quite different from framerate in setting 60.000000, please check setting or timestamp unit (ms), start_Ts = 3716476295716
+[OpenH264] this = 0x0xee77dd68300, Warning:Actual input framerate 26.000000 is different from framerate in setting 18.000000, suggest to use other rate control modes
+[13623:1008/204528.191031:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1127 bytes failed with error 11
+[13623:1008/204528.191154:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1125 bytes failed with error 11
+[13623:1008/204528.211683:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.222173:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.222382:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.222514:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.227333:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.227434:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.227489:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.232503:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.232587:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.232643:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.237741:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.237830:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.237887:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.242826:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.242910:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1183 bytes failed with error 11
+[13623:1008/204528.248047:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1178 bytes failed with error 11
+[13623:1008/204528.253192:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.273831:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.294423:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.375027:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1171 bytes failed with error 11
+[13623:1008/204528.380208:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1169 bytes failed with error 11
+[13623:1008/204528.421447:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 94 bytes failed with error 11
+[13623:1008/204528.431794:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.431975:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.432105:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.436960:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.437133:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.437217:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.437312:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.442130:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.442297:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.447330:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.447498:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.447583:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.452449:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.452631:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.452722:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1153 bytes failed with error 11
+[13623:1008/204528.457766:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1141 bytes failed with error 11
+[13623:1008/204528.473212:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.493863:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.499079:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.499173:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.499236:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.504296:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.504405:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.504471:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.509657:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.509768:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.514846:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.515021:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.515139:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.515218:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.520091:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.520249:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1167 bytes failed with error 11
+[13623:1008/204528.525194:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1154 bytes failed with error 11
+[13623:1008/204528.535481:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.556108:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.556322:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.556413:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.556514:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.561336:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.561508:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.566567:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.566696:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.566798:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.571751:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.571901:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.572110:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 34 bytes failed with error 11
+[13623:1008/204528.577056:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.577182:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.577281:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1206 bytes failed with error 11
+[13623:1008/204528.577357:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 1201 bytes failed with error 11
+[13623:1008/204528.592449:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[13623:1008/204528.600832:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 30 bytes failed with error 11
+[13623:1008/204528.603493:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 94 bytes failed with error 11
+[13623:1008/204528.607561:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 30 bytes failed with error 11
+[13623:1008/204528.610639:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 30 bytes failed with error 11
+[13623:1008/204528.615518:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 30 bytes failed with error 11
+[13623:1008/204528.616517:ERROR:stunport.cc(282)] Jingle:Port[0xee77eb91000:audio:1:0:local:Net[wlp4s0:192.168.1.x/24:Wifi]]: UDP send of 182 bytes failed with error 11
+[OpenH264] this = 0x0xee7805f1ae0, Warning:Actual input framerate fAverageFrameRate = 0.000000 is quite different from framerate in setting 60.000000, please check setting or timestamp unit (ms), start_Ts = 3716477187129
+[OpenH264] this = 0x0xee7805f1ae0, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[13623:1008/205609.251758:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1089, seqnum=920, SSRC=2757453157
+[13623:1008/205640.438631:ERROR:audio_send_stream.cc(93)] Failed to set up send codec state.
+[OpenH264] this = 0x0xee77e462330, Warning:Actual input framerate fAverageFrameRate = 0.000000 is quite different from framerate in setting 60.000000, please check setting or timestamp unit (ms), start_Ts = 3716477853314
+[13623:1008/205824.778065:ERROR:port.cc(615)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send STUN ping response, to=114.23.130.x:43146, err=-1, id=3e16fa8c202e6a8bade769da
+[13623:1008/205825.819160:ERROR:port.cc(615)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send STUN ping response, to=114.23.130.x:43146, err=-1, id=36319531ed639999b07fca95
+[13623:1008/205826.826416:ERROR:port.cc(615)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send STUN ping response, to=114.23.130.x:43146, err=-1, id=60b30493cb152234b3a417c7
+[13623:1008/205827.846613:ERROR:port.cc(615)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send STUN ping response, to=114.23.130.x:43146, err=-1, id=1f65ef8ffbf5bdd498c23bda
+[13623:1008/205829.298465:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205829.299293:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205829.319257:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=648, seqnum=30469, SSRC=2757453359
+[13623:1008/205829.319363:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14783, SSRC=2757453358
+[OpenH264] this = 0x0xee77ebb0ba0, Warning:Actual input framerate fAverageFrameRate = 0.000000 is quite different from framerate in setting 60.000000, please check setting or timestamp unit (ms), start_Ts = 3716477909328
+[13623:1008/205829.346344:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14784, SSRC=2757453358
+[13623:1008/205829.346446:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=757, seqnum=30470, SSRC=2757453359
+[13623:1008/205829.374368:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14785, SSRC=2757453358
+[13623:1008/205829.374451:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=855, seqnum=30471, SSRC=2757453359
+[13623:1008/205829.374586:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14786, SSRC=2757453358
+[13623:1008/205829.400550:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=936, seqnum=30472, SSRC=2757453359
+[13623:1008/205829.400621:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14787, SSRC=2757453358
+[13623:1008/205829.421805:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14788, SSRC=2757453358
+[13623:1008/205829.421901:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=132, seqnum=30473, SSRC=2757453359
+[13623:1008/205829.421961:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1120, seqnum=30474, SSRC=2757453359
+[13623:1008/205829.486065:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14789, SSRC=2757453358
+[13623:1008/205829.486126:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14790, SSRC=2757453358
+[13623:1008/205829.486168:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14791, SSRC=2757453358
+[13623:1008/205829.486213:ERROR:channel.cc(869)] Failed to unprotect audio RTCP packet: size=38, type=206
+[13623:1008/205829.486259:ERROR:channel.cc(869)] Failed to unprotect video RTCP packet: size=38, type=206
+[13623:1008/205829.486301:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=727, seqnum=30475, SSRC=2757453359
+[13623:1008/205829.486341:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14792, SSRC=2757453358
+[13623:1008/205829.512591:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=887, seqnum=30476, SSRC=2757453359
+[13623:1008/205829.512702:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14793, SSRC=2757453358
+[13623:1008/205829.539620:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=795, seqnum=30477, SSRC=2757453359
+[13623:1008/205829.539780:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14794, SSRC=2757453358
+[13623:1008/205829.548682:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205829.549454:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205829.567315:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14795, SSRC=2757453358
+[13623:1008/205829.567420:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=86, seqnum=30478, SSRC=2757453359
+[13623:1008/205829.585954:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1131, seqnum=30479, SSRC=2757453359
+[13623:1008/205829.586062:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14796, SSRC=2757453358
+[13623:1008/205829.586209:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14797, SSRC=2757453358
+[13623:1008/205829.612355:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=848, seqnum=30480, SSRC=2757453359
+[13623:1008/205829.638884:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14798, SSRC=2757453358
+[13623:1008/205829.639036:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14799, SSRC=2757453358
+[13623:1008/205829.658067:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=689, seqnum=30481, SSRC=2757453359
+[13623:1008/205829.658197:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14800, SSRC=2757453358
+[13623:1008/205829.658276:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=671, seqnum=30482, SSRC=2757453359
+[13623:1008/205829.685058:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14801, SSRC=2757453358
+[13623:1008/205829.685139:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14802, SSRC=2757453358
+[13623:1008/205829.685210:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=867, seqnum=30483, SSRC=2757453359
+[13623:1008/205829.711486:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14803, SSRC=2757453358
+[13623:1008/205829.738723:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=211, seqnum=30484, SSRC=2757453359
+[13623:1008/205829.738832:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=615, seqnum=30485, SSRC=2757453359
+[13623:1008/205829.739033:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14804, SSRC=2757453358
+[13623:1008/205829.765500:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=614, seqnum=30486, SSRC=2757453359
+[13623:1008/205829.765578:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14805, SSRC=2757453358
+[13623:1008/205829.765637:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14806, SSRC=2757453358
+[13623:1008/205829.792480:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=834, seqnum=30487, SSRC=2757453359
+[13623:1008/205829.792912:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14807, SSRC=2757453358
+[13623:1008/205829.819385:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=833, seqnum=30488, SSRC=2757453359
+[13623:1008/205829.819606:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14808, SSRC=2757453358
+[13623:1008/205829.819752:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14809, SSRC=2757453358
+[13623:1008/205829.846031:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1067, seqnum=30489, SSRC=2757453359
+[13623:1008/205829.846154:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14810, SSRC=2757453358
+[13623:1008/205829.872661:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=198, seqnum=30490, SSRC=2757453359
+[13623:1008/205829.872871:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14811, SSRC=2757453358
+[13623:1008/205829.901172:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1059, seqnum=30491, SSRC=2757453359
+[13623:1008/205829.901349:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14812, SSRC=2757453358
+[13623:1008/205829.928939:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14813, SSRC=2757453358
+[13623:1008/205829.929332:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=149, seqnum=30492, SSRC=2757453359
+[13623:1008/205829.929421:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=770, seqnum=30493, SSRC=2757453359
+[13623:1008/205829.929497:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14814, SSRC=2757453358
+[13623:1008/205829.955803:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=769, seqnum=30494, SSRC=2757453359
+[13623:1008/205829.955952:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14815, SSRC=2757453358
+[13623:1008/205829.982851:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=854, seqnum=30495, SSRC=2757453359
+[13623:1008/205829.983138:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14816, SSRC=2757453358
+[13623:1008/205830.010826:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14817, SSRC=2757453358
+[13623:1008/205830.037550:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=794, seqnum=30496, SSRC=2757453359
+[13623:1008/205830.037644:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14818, SSRC=2757453358
+[13623:1008/205830.048947:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205830.049703:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205830.054140:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=241, seqnum=30497, SSRC=2757453359
+[13623:1008/205830.054269:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14819, SSRC=2757453358
+[13623:1008/205830.054378:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1107, seqnum=30498, SSRC=2757453359
+[13623:1008/205830.065006:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14820, SSRC=2757453358
+[13623:1008/205830.091863:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=560, seqnum=30499, SSRC=2757453359
+[13623:1008/205830.091983:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14821, SSRC=2757453358
+[13623:1008/205830.118932:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14822, SSRC=2757453358
+[13623:1008/205830.119052:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1022, seqnum=30500, SSRC=2757453359
+[13623:1008/205830.145867:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14823, SSRC=2757453358
+[13623:1008/205830.172549:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14824, SSRC=2757453358
+[13623:1008/205830.172684:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1022, seqnum=30501, SSRC=2757453359
+[13623:1008/205830.172858:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14825, SSRC=2757453358
+[13623:1008/205830.199878:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14826, SSRC=2757453358
+[13623:1008/205830.200155:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=1020, seqnum=30502, SSRC=2757453359
+[13623:1008/205830.226648:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14827, SSRC=2757453358
+[13623:1008/205830.253731:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=196, seqnum=30503, SSRC=2757453359
+[13623:1008/205830.253894:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14828, SSRC=2757453358
+[13623:1008/205830.254004:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14829, SSRC=2757453358
+[13623:1008/205830.279127:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=681, seqnum=30504, SSRC=2757453359
+[13623:1008/205830.279376:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14830, SSRC=2757453358
+[13623:1008/205830.279577:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=681, seqnum=30505, SSRC=2757453359
+[13623:1008/205830.305961:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14831, SSRC=2757453358
+[13623:1008/205830.306093:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=802, seqnum=30506, SSRC=2757453359
+[13623:1008/205830.332411:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14832, SSRC=2757453358
+[13623:1008/205830.332643:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=322, seqnum=30507, SSRC=2757453359
+[13623:1008/205830.332920:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14833, SSRC=2757453358
+[13623:1008/205830.359514:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=721, seqnum=30508, SSRC=2757453359
+[13623:1008/205830.359754:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14834, SSRC=2757453358
+[13623:1008/205830.386339:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14835, SSRC=2757453358
+[13623:1008/205830.386508:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=748, seqnum=30509, SSRC=2757453359
+[13623:1008/205830.413128:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14836, SSRC=2757453358
+[13623:1008/205830.413252:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14837, SSRC=2757453358
+[13623:1008/205830.413332:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=295, seqnum=30510, SSRC=2757453359
+[13623:1008/205830.440341:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=281, seqnum=30511, SSRC=2757453359
+[13623:1008/205830.440429:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14838, SSRC=2757453358
+[13623:1008/205830.440487:ERROR:channel.cc(859)] Failed to unprotect video RTP packet: size=948, seqnum=30512, SSRC=2757453359
+[13623:1008/205830.466246:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14839, SSRC=2757453358
+[13623:1008/205830.492778:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14840, SSRC=2757453358
+[13623:1008/205830.493095:ERROR:channel.cc(859)] Failed to unprotect audio RTP packet: size=182, seqnum=14841, SSRC=2757453358
+[13623:1008/205830.493203:ERROR:channel.cc(869)] Failed to unprotect audio RTCP packet: size=38, type=206
+[13623:1008/205830.493284:ERROR:channel.cc(869)] Failed to unprotect video RTCP packet: size=38, type=206
+[13623:1008/205830.592182:ERROR:channel.cc(869)] Failed to unprotect audio RTCP packet: size=90, type=200
+[13623:1008/205830.592477:ERROR:channel.cc(869)] Failed to unprotect video RTCP packet: size=90, type=200
+[13623:1008/205830.618700:ERROR:channel.cc(869)] Failed to unprotect audio RTCP packet: size=106, type=200
+[13623:1008/205830.618848:ERROR:channel.cc(869)] Failed to unprotect video RTCP packet: size=106, type=200
+[13623:1008/205831.049236:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205831.049910:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205833.049439:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205833.050222:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205837.049612:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205837.050452:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205845.049886:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205845.050611:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205853.050188:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205853.050835:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205901.050499:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205901.051122:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[13623:1008/205945.459462:ERROR:turnport.cc(719)] Jingle:Port[0xee77f9b9800:audio:1:0:relay:Net[wlp4s0:192.168.1.x/24:Wifi]]: Failed to send TURN message, err=11
+[OpenH264] this = 0x0xee77ebb0ba0, Warning:[Rc] iDid = 0,iContinualSkipFrames(3) is large
+[OpenH264] this = 0x0xee77ebb0ba0, Warning:[Rc] iDid = 0,iContinualSkipFrames(6) is large
