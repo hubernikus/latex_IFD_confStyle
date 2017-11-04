@@ -14,3 +14,5 @@ application/vnd.ms-excel=libreoffice-calc.desktop;
 application/xml=firefox.desktop;
 text/x-cmake=gedit.desktop;
 text/x-matlab=emacs24.desktop;gedit.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+image/png=eog.desktop;

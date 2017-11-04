@@ -131,9 +131,15 @@ source /opt/ros/kinetic/setup.bash
 # Empty trash with trash/empty, list it with trash-list
 alias rm=trash
 
-# Alias for Arduino
-alias arduino=/home/lukas/Software/arduino/arduino-1.8.5/arduino
+# Python 3 as default environment
+alias python=python3
+alias pip=pip3
 
+# Alias for Arduino
+#alias arduino=/home/lukas/Software/arduino/arduino-1.8.5/arduino
+
+# Alias for TOR
+alias tor=/home/lukas/Software/Tor/tor-browser_en-US/start-tor-browser.desktop
 
 # Add PyQt5 to python for spyder usage
 export PYTHONPATH=/usr/lib/python3/dist-packages/PyQt5/:$PYTHONPATH
