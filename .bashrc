@@ -126,7 +126,6 @@ source /opt/ros/kinetic/setup.bash
 # LEARN vim  before uncommenting...
 #export EDITOR='emacs -nw'
 
-
 # Moving to trash rather than completely removing files
 # Empty trash with trash/empty, list it with trash-list
 alias rm=trash

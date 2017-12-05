@@ -176,5 +176,6 @@ bar {
 # All FIGURE windows will be floating > (e.g. MATLAB)
 for_window [title="Figure*"] floating enable
 
-
+# assign all figures to workspace 5
+#assign [title="Figure"] 5
 

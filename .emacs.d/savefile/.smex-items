@@ -1,0 +1,27 @@
+
+;; ----- smex-history -----
+(
+ whitespace-mode
+ which-key-enable-god-mode-support
+ comment-region
+ uncomment-region
+ where-is
+ calc-select-once-maybe
+ replace-string
+)
+
+;; ----- smex-data -----
+(
+ (compile . 3)
+ (electric-indent-mode . 5)
+ (auto-fill-mode . 3)
+ (tex-compile . 1)
+ (comment-region . 17)
+ (replace-regexp . 1)
+ (replace-string . 25)
+ (uncomment-region . 3)
+ (whitespace-mode . 55)
+ (calc-select-once-maybe . 1)
+ (where-is . 1)
+ (which-key-enable-god-mode-support . 2)
+)
