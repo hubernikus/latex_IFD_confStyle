@@ -19,13 +19,10 @@ fi
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-
 ###### USER MODIFIED #############
-
 # set keyboard layout, capslock-ctrl swap
-setxkbmap -layout "us,ch(de)" -option "ctrl:nocaps,grp:alt_space_toggle"
+setxkbmap -layout  "us,ch(de)" -option "ctrl:nocaps,grp:alt_space_toggle"
 
 # add xbinkeys for volume special keys, check them with
 # source: ~/.xbinkeysrc
 xbindkeys
-

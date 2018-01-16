@@ -3,13 +3,14 @@ x-scheme-handler/mailto=thunderbird.desktop
 message/rfc822=thunderbird.desktop
 text/x-matlab=emacs24.desktop
 text/x-arduino=arduino-arduinoide.desktop
+video/mp4=vlc.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=thunderbird.desktop;
 message/rfc822=thunderbird.desktop;
 application/zip=org.gnome.FileRoller.desktop;mount-archive.desktop;
 application/pdf=evince.desktop;kde4-okularApplication_pdf.desktop;gimp.desktop;
-text/plain=gedit.desktop;
+text/plain=gedit.desktop;kde4-okularApplication_txt.desktop;userapp-evince-BWRSCZ.desktop;emacs24.desktop;org.gnome.gedit.desktop;libreoffice-calc.desktop;
 application/vnd.ms-excel=libreoffice-calc.desktop;
 application/xml=firefox.desktop;
 text/x-cmake=gedit.desktop;
@@ -27,5 +28,10 @@ image/vnd.djvu=evince.desktop;
 text/html=firefox.desktop;
 image/jpeg=eog.desktop;
 application/msword=libreoffice-writer.desktop;
-video/mp4=org.gnome.Totem.desktop;
+video/mp4=vlc.desktop;org.gnome.Totem.desktop;
 text/x-tex=emacs24.desktop;
+text/csv=libreoffice-calc.desktop;org.gnome.gedit.desktop;
+application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
+text/x-objcsrc=gedit.desktop;
+text/x-bibtex=gedit.desktop;
+application/vnd.android.package-archive=openjdk-8-java.desktop;

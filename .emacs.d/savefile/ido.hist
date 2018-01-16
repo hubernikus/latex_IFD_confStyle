@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm/" . "lib_obstacle_avoidance/")
+ ("/home/lukas/Code/AirborneWindEnergy/" . "steadyState_modes/")
  ("/home/lukas/Latex/" . "test/")
  ("/" . "usr/")
 )
@@ -9,9 +11,13 @@
 ;; ----- ido-work-directory-list -----
 (
  "/home/lukas/Code/AirborneWindEnergy/python/lib/"
- "/home/lukas/Code/AirborneWindEnergy/python/model/"
  "/home/lukas/Code/AirborneWindEnergy/python/"
  "/home/lukas/Latex/AirbornWindEnergy/chap/"
+ "/home/lukas/Code/AirborneWindEnergy/python/model/"
+ "/home/lukas/Code/AirborneWindEnergy/python/old/"
+ "/home/lukas/Code/AirborneWindEnergy/steadyState_modes/"
+ "/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm_cpp/"
+ "/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm/lib_obstacle_avoidance/"
  "/home/lukas/Latex/test/"
  "/home/lukas/Latex/AirbornWindEnergy/"
  "/usr/share/texlive/texmf-dist/tex/latex/l3experimental/l3str/"
@@ -19,29 +25,55 @@
 
 ;; ----- ido-work-file-list -----
 (
- "controllib.py"
- "quatlib.py"
- "kite_sim.py"
- "motionSimulation_3D.py"
- "controllib"
- "nonLinContr_lib.py"
- "steadyCircle_simuMPC.yaml"
- "steadyCircle_test.yaml"
- "steadyCircle3.yaml"
+ "visual_lib.py"
+ "plot_aircraft.py"
  "equilibriumSearch_steadyMotion.py"
+ "quatlib.py"
+ "nonLinContr_lib.py"
+ "controllib.py"
+ "motionSimulation_3D.py"
+ "appendix.tex"
+ "introduction.tex"
+ "airplaneModel.tex"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/home/lukas/Code/AirborneWindEnergy/python/lib/" (23078 32786 911678 493000) "quatlib.py" "../" "__pycache__/" "./" "controllib.py" "nonLinContr_lib.py")
+ ("/home/lukas/Code/AirborneWindEnergy/python/" (23132 11074 979417 959000) "../" "equilibriumSearch_steadyMotion.py" "asdf.png" "steadyState_longitudinal_gamma-30deg.yaml" "plot_aircraft.py" "model/" ".#motionSimulation_3D.py" "__pycache__/" "old/" "steadyState_longitudial_gamma10deg.yaml" "./" "numeric_MPC_simulation.csv" "steadyState_longitudial_gamma0.yaml" ".idea/" "lib/" "steadyState_longitudial.yaml" "motionSimulation_3D.py" "testing/" "steadyState_longitudial_gamma-30deg.yaml")
 
- ("/home/lukas/Code/AirborneWindEnergy/python/" (23078 32764 743935 171000) "../" "equilibriumSearch_steadyMotion.py" "model/" "old/" "./" ".idea/" "lib/" "motionSimulation_3D.py" "testing/")
+ ("/home/lukas/Code/AirborneWindEnergy/python/lib/" (23132 9317 791025 777000) "quatlib.py" "../" "__pycache__/" "aircraft_class.py" "old/" "./" "controllib.py" "visual_lib.py" "nonLinContr_lib.py")
 
- ("/home/lukas/Code/AirborneWindEnergy/python/model/" (23078 31834 132884 784000) "../" "umx_radian.yaml" "__pycache__/" "kite_sim.py" "./")
+ ("/usr/local/lib/python3.5/dist-packages/" (23081 37441 673124 812000) "nbformat-4.4.0.dist-info/" "jupyter_core-4.3.0.dist-info/" "numpydoc/" "babel/" "pip/" "PyOpenGL-3.1.0.egg-info/" "wrapt-1.10.11.egg-info/" "nbconvert/" "Babel-2.5.1.dist-info/" "html5lib-1.0b10.dist-info/" "prompt_toolkit-1.0.15.dist-info/" "webencodings/" "spyder_io_hdf5/" "isort-4.2.15.dist-info/" "googlemaps/" "jedi/" "six-1.11.0.dist-info/" "../" "matplotlib/" "ipykernel_launcher.py" "prompt_toolkit/" "jsonschema-2.6.0.dist-info/" "casadi-3.2.2.dist-info/" "numpy-1.13.3.dist-info/" "pickleshare-0.7.4.dist-info/" "certifi/" "Sphinx-1.6.4.dist-info/" "pandocfilters.py" "decorator.py" "psutil-5.3.1.egg-info/" "parso/" "alabaster-0.7.10.dist-info/" "urllib3/" "mccabe.py" "numpydoc-0.7.0.egg-info/" "docutils-0.14.dist-info/" "bleach/" "traitlets/" "pandocfilters-1.4.2.egg-info/" "pickleshare.py" "pytz/" "nbformat/" "pyzmq-16.0.2.dist-info/" "tornado-4.5.2.egg-info/" "sphinxcontrib/" "matplotlib-2.1.0.dist-info/" "__pycache__/" "astroid/" "idna-2.6.dist-info/" "idna/" "lazy_object_proxy/" "OpenGL/" "dateutil/" "mccabe-0.6.1.dist-info/" "mpl_toolkits/" "cycler-0.10.0.dist-info/" "sip.so" "Pygments-2.2.0.dist-info/" "jupyter_client/" "testpath/" "chardet/" "wcwidth-0.1.7.dist-info/" "pylint-1.7.4.dist-info/" "pyflakes-1.6.0.dist-info/" "qtawesome/" "cycler.py" "spyder-3.2.3.dist-info/" "html5lib/" "simplegeneric-0.8.1.egg-info/" "jupyter_client-5.1.0.dist-info/" "alabaster/" "./" "sphinx/" "qtconsole/" "pygments/" "pylint/" "chardet-3.0.4.dist-info/" "PyYAML-3.12.egg-info" "mistune.py" "pycodestyle.py" "mistune-0.7.4.dist-info/" "jupyter_core/" "sip-4.19.3.dist-info/" "rope-0.10.7.egg-info/" "IPython/" "yaml/" "wcwidth/" "isort/" "sphinxcontrib_websupport-1.0.1.dist-info/" "spyder_profiler/" "urllib3-1.22.dist-info/" "googlemaps-2.5.1.egg-info/" "spyder_breakpoints/" "python_dateutil-2.6.1.dist-info/" "pyparsing-2.2.0.dist-info/" "requests-2.18.4.dist-info/" "ipython_genutils-0.2.0.dist-info/" "mistune/" "spyder_io_dcm/" "wrapt/" "psutil/" "six.py" "QtPy-1.3.1.dist-info/" "astroid-1.5.3.dist-info/" "ipykernel/" "pylab.py" "numpy/" "bleach-2.1.1.dist-info/" "traitlets-4.3.2.dist-info/" "jsonschema/" "PyQt5/" "PyQt5-5.9.dist-info/" "pycodestyle-2.3.1.dist-info/" "docutils/" "testpath-0.3.1.dist-info/" "sphinxcontrib_websupport-1.0.1-py3.6-nspkg.pth" "entrypoints-0.2.3.dist-info/" "spyder_pylint/" "snowballstemmer-1.2.1.dist-info/" "pyparsing.py" "nbconvert-5.3.1.dist-info/" "tornado/" "jupyter.py" "webencodings-0.5.1.dist-info/" "casadi/" "entrypoints.py" "jedi-0.11.0.dist-info/" "spyder/" "ipython-6.0.0.dist-info/" "qtpy/" "imagesize-0.7.1.dist-info/" "ipython_genutils/" "qtconsole-4.3.1.dist-info/" "decorator-4.1.2.dist-info/" "requests/" "snowballstemmer/" "lazy_object_proxy-1.3.1.dist-info/" "certifi-2017.11.5.dist-info/" "pip-9.0.1.dist-info/" "ipykernel-4.6.1.dist-info/" "matplotlib-2.1.0-py3.5-nspkg.pth" "pyflakes/" "simplegeneric.py" "QtAwesome-0.4.4.dist-info/" "parso-0.1.0.dist-info/" "imagesize/" "pytz-2017.2.dist-info/" "rope/" "zmq/")
+
+ ("/usr/local/lib/python3.5/dist-packages/matplotlib/" (23007 27064 145934 574000) "rcsetup.py" "_pylab_helpers.py" "collections.py" "spines.py" "image.py" "../" "animation.py" "stackplot.py" "_path.cpython-35m-x86_64-linux-gnu.so" "legend_handler.py" "_version.py" "afm.py" "axes/" "_cntr.cpython-35m-x86_64-linux-gnu.so" "pyplot.py" "path.py" "_cm_listed.py" "mlab.py" "textpath.py" "axis.py" "widgets.py" "scale.py" "tight_layout.py" "_animation_data.py" "__pycache__/" "_qhull.cpython-35m-x86_64-linux-gnu.so" "blocking_input.py" "type1font.py" "tight_bbox.py" "cm.py" "tri/" "_image.cpython-35m-x86_64-linux-gnu.so" "projections/" "contour.py" "patches.py" "mpl-data/" "markers.py" "lines.py" "backend_tools.py" "_tri.cpython-35m-x86_64-linux-gnu.so" "./" "tests/" "finance.py" "container.py" "sphinxext/" "style/" "table.py" "__init__.py" "offsetbox.py" "_mathtext_data.py" "artist.py" "_contour.cpython-35m-x86_64-linux-gnu.so" ".libs/" "docstring.py" "ft2font.cpython-35m-x86_64-linux-gnu.so" "_color_data.py" "colors.py" "texmanager.py" "quiver.py" "text.py" "font_manager.py" "pylab.py" "ticker.py" "fontconfig_pattern.py" "bezier.py" "mathtext.py" "compat/" "category.py" "patheffects.py" "colorbar.py" "figure.py" "ttconv.cpython-35m-x86_64-linux-gnu.so" "gridspec.py" "_cm.py" "dates.py" "backend_managers.py" "backend_bases.py" "backends/" "sankey.py" "units.py" "transforms.py" "cbook/" "hatch.py" "testing/" "dviread.py" "_png.cpython-35m-x86_64-linux-gnu.so" "legend.py" "streamplot.py")
+
+ ("/usr/local/lib/python3.5/dist-packages/matplotlib/axes/" (23007 27064 145934 574000) "../" "_axes.py" "_base.py" "__pycache__/" "./" "__init__.py" "_subplots.py")
+
+ ("/home/lukas/Latex/AirbornWindEnergy/chap/" (23120 48420 85120 959000) "../" "theory.log" "introduction.tex" "appendix.tex" "discussion.tex" "steadyStateMotion.tex" "introduction.log" "conclusion.tex" "./" "controllerDesign.tex" "airplaneModel.tex" "exampleAppendixChapter.tex" "theory.tex~" "comparionsController.tex" "nomenclature.tex" "exampleRegularChapter.tex" "auto/" "comparisonTechnologies.tex~" "comparisonTechnologies.tex")
+
+ ("/home/lukas/Dropbox/EPFL/Paik/Code/LenseSimulation/" (23099 50369 242801 700000) "../" "FigureObject.fig.pickle" "lenseSimulation.py" "flycheck_lenseSimulation.py" "./" "FigureObject.fig.png" ".#lenseSimulation.py")
+
+ ("/home/lukas/Code/AirborneWindEnergy/python/model/" (23087 4369 326272 869000) "../" "umx_radian.yaml" "__pycache__/" "kite_sim.py" "./")
+
+ ("/home/lukas/Code/AirborneWindEnergy/python/old/" (23078 30349 979034 392000) "steadyState_Circle_gamma10deg.yaml" "../" "kite_validation_LH_old.py" "steadyState_Circle_gamma30deg.yaml" "var_sim_py.txt" "plotSimulation_example2.py" "quatinv.py" "./" "steadyStateMotion_circle.py" "steadyStateMotion_longitudinal.py" "test.py" "steadyState_Circle_gamma0deg.yaml" "kite_sim_old.py" "quatmul.py" "test.txt" "kite_validation_LH.py~" "casadi_test.py~" "q" "steadyCircle3.yaml" "steadyState_longitudial.yaml" "test2.5.png" "quatlib.pyc" "circle0deg.yaml" "steadyState_Circle_gamma80deg.yaml")
+
+ ("/usr/local/include/Eigen/" (23004 60789 255717 701000) "SuperLUSupport" "../" "StdDeque" "Eigen" "QtAlignedMalloc" "SparseQR" "IterativeLinearSolvers" "PaStiXSupport" "Eigenvalues" "SVD" "Dense" "Sparse" "SparseCholesky" "Cholesky" "LU" "UmfPackSupport" "./" "Jacobi" "PardisoSupport" "StdList" "MetisSupport" "Core" "SparseLU" "CholmodSupport" "Householder" "src/" "CMakeLists.txt" "StdVector" "Geometry" "OrderingMethods" "SPQRSupport" "QR" "SparseCore")
+
+ ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm_cpp/" (23084 28665 139402 133000) "../" "Eigen/" "main" "test" "main.cpp" "./" "objectAvoidance_DS.h" "objectAvoidance_DS.cpp")
+
+ ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm/lib_obstacle_avoidance/" (23081 22483 747983 493000) "../" "obs_check_collision.m" "obs_modulation_fluidMechanics.m" "obs_modulation_ellipsoid_old.m" "obs_draw_ellipsoid.m" "Simulation_v2_objModule.m" "old/" "Simulation.m" "obs_modulation_ellipsoid_test.m" "obs_merge_simple.m" "./" "obs_modulation_ellipsoid_adapted_old.m" "obs_modulation_ellipsoid_adapted.m" "obs_modulation_rotation.m" "obs_modulation_ellipsoid.m" "obs_rotation_center.m")
+
+ ("/home/lukas/Code/" (23041 53514 54610 681000) "ProductDevelopement/" "../" "MachineLearningProgramming/" "sensorOrientation/" "MachineLearning/" "AirborneWindEnergy/" "Test/" "./")
+
+ ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm/" (23078 26245 24738 755000) "../" "animations/" "stableLimitcycle_DS.m" "DynamicalSystems/" ".git/" "ExitConcaveRegions.m" "ani/" "Tutorial_Obstacle_Format.m" "LocalRotation_tries.m" "DS_midSemester_presentation.m" "fig/" "README.md" "./" "Tutorial_Obstacle_Avoidance.m" "AvoidMovingObjects.m" "lib_obstacle_avoidance/" "DS_movingObjects.m" "Readme.txt" "DS_fluidDynamics.m" "DS_firstTries_LH.m")
+
+ ("/home/lukas/Code/MachineLearning/" (23081 47755 858684 519000) "../" "ObstacleAvoidanceAlgroithm/" "./" "ObstacleAvoidanceAlgroithm_cpp/" "seds_LASA/" "QP_IK_solver/")
+
+ ("/home/lukas/Code/AirborneWindEnergy/steadyState_modes/" (23076 35039 326614 243000) "../" "circle_gamma80deg.yaml" "steadyState_longitudial_steadyLevel.yaml" "steadyLevel_longitudial.yaml" "steadyCircle.yaml" "circle_gamma0deg.yaml" "steadyState_Circle_gamma30deg.yaml" "steadyState_Circle_gamma5deg.yaml" "circle_gamma30deg.yaml" "circle_gamma45deg.yaml" "circle +_gamma80deg.yaml" "old/" "steadyCircle_simuMPC.yaml" "steadyCircle_gamma5.yaml" "./" "steadyCircle_gamma0.08726646259971647.yaml" "steadyCircle_gamma5deg.yaml" "circle_gamma00deg.yaml" "steadyCircle3.yaml" "steadyCircle_test.yaml" "steadyState_longitudial.yaml" "steadyCircle2.yaml" "steadyState_Circle_gamma80deg.yaml")
+
+ ("/home/lukas/Code/AirborneWindEnergy/" (23076 34426 166283 747000) "../" ".git/" "fig/" "var_sim_py.txt" "python/" "./" "MATLAB/" "steadyState_modes/")
 
  ("/home/lukas/Latex/Paik/" (23055 15310 793505 978000) "main.log" "../" "main.tex" "fig/" "./" "main.pdf" "main.synctex.gz" ".#main.tex" "code/" "main.aux" "auto/" "main.out")
-
- ("/home/lukas/Latex/AirbornWindEnergy/chap/" (23049 40169 204391 444000) "../" "theory.log" "introduction.tex" "introduction.log" "conclusion.tex" "theory.tex" "./" "airplaneModel.tex" "exampleAppendixChapter.tex" "theory.tex~" "comparionsController.tex" "exampleRegularChapter.tex" "auto/" "comparisonTechnologies.tex~" "comparisonTechnologies.tex")
 
  ("/home/lukas/Code/ProductDevelopement/LenseSimulation/" (23044 22093 122277 552000) "../" "lenseSimulation.py" "flycheck_lenseSimulation.py" "./")
 

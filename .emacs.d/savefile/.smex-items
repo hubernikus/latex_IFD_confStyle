@@ -2,26 +2,37 @@
 ;; ----- smex-history -----
 (
  whitespace-mode
- which-key-enable-god-mode-support
+ whitespace-cleanup
+ replace-string
+ ethio-replace-space
  comment-region
  uncomment-region
- where-is
- calc-select-once-maybe
- replace-string
+ shell
 )
 
 ;; ----- smex-data -----
 (
- (compile . 3)
+ (compile . 5)
  (electric-indent-mode . 5)
  (auto-fill-mode . 3)
  (tex-compile . 1)
- (comment-region . 17)
+ (comment-region . 31)
  (replace-regexp . 1)
- (replace-string . 25)
- (uncomment-region . 3)
- (whitespace-mode . 55)
+ (replace-string . 31)
+ (uncomment-region . 8)
+ (whitespace-mode . 132)
  (calc-select-once-maybe . 1)
- (where-is . 1)
- (which-key-enable-god-mode-support . 2)
+ (where-is . 2)
+ (which-key-enable-god-mode-support . 3)
+ (whois . 1)
+ (shell . 6)
+ (yas-compile-directory . 2)
+ (strokes-help . 2)
+ (whitespace-toggle-options . 1)
+ (c-mode . 2)
+ (inferior-python-mode . 20)
+ (undo-tree-switch-branch . 6)
+ (ethio-replace-space . 1)
+ (whitespace-cleanup . 2)
+ (python-menu . 1)
 )

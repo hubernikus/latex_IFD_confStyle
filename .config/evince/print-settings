@@ -11,7 +11,7 @@ cups-Interleave=None
 cups-CN_DPI=600dpi
 cups-Duplex=DuplexNoTumble
 cover-before=none
-cups-number-up=2
+cups-number-up=1
 cups-TonerSave=Default
 cups-HalfTone=Default
 evince-print-setting-page-size=false
@@ -28,12 +28,12 @@ cups-Booklet=Default
 default-source=Auto
 cups-ShiftFrontLR=None
 cups-StapleType=StapleOff
-media-type=None
+media-type=PLAIN
 evince-print-setting-page-scale=1
 cups-ShiftBackUD=None
 cups-BindingLocation=None
 cups-Creep=Default
-cups-MediaType=None
+cups-MediaType=PLAIN
 cups-job-priority=50
 cups-DotGAdjust=Default
 cups-TSwitch=Default
@@ -67,6 +67,12 @@ cups-AdvancedSmooth=Default
 cups-number-up-layout=lrtb
 number-up-layout=lrtb
 cups-Punch=None
+
+resolution=600
+resolution-x=600
+resolution-y=600
+cups-brlaserEconomode=False
+cups-Resolution=600dpi
 
 [Page Setup]
 PPDName=A4
