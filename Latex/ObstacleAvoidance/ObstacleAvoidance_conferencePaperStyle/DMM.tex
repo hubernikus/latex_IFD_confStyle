@@ -1,0 +1,168 @@
+The algorithm described in this section has been proposed by Khansari \cite{khansari2012dynamical}.
+
+\subsection{Real Time Object Avoidance}
+% An autonomous system (time-invariant) is given as by the following equation:
+% \begin{equation}
+% \dot \xi  = f(\xi) \qquad f : \mathbb{R}^d  \mapsto \mathbb{R}^d
+% \end{equation}
+A trajectory in a DS, which represents the robot position with time, can be computed by discrete integration of $f(\cdot)$ (Eq.~\ref{eq:DS_sys} \& \ref{eq:DS_sys2}) recursively:
+\begin{equation}
+  \xi_{t} = \xi_{t-1} + f(\cdot) \delta t
+\end{equation}
+where $\delta t$ is the integration step.
+
+In presence of obstacles, the initial DS needs to be modulated to generate a safe trajectory without collision with the obstacle boundary. For this region, a continuous function, here referred as level function, $\Gamma(\tilde \xi) \; : \;\mathbb{R}^d \mapsto \mathbb{R}$ is used to partition space into three regions:
+\begin{align}
+  &\text{Interior points:}  \qquad & \mathcal{X}^o = \{\xi \in \mathbb{R}^d: \Gamma(\tilde \xi) < 1 \} \\
+  &\text{Boundary points:}  \qquad & \mathcal{X}^b = \{\xi \in \mathbb{R}^d: \Gamma(\tilde \xi) = 1 \} \\
+  &\text{Free region:}  \qquad & \mathcal{X}^f = \{\xi \in \mathbb{R}^d: \Gamma(\tilde \xi) > 1 \}
+\end{align}
+with $\tilde \xi = \xi - \xi^0$ is the distance from the center of the object $\xi^0$. Furthermore, the function $\Gamma (\tilde \xi)$ has a continuous first order partial derivative and the function value increases monotonically on level surfaces further away from the origin.
+
+% Hyper-shperes are considered in this work, but the the algorithm can be extended to general convex obstacles. A hyper-sphere object centered at $\xi^0$ with radius $r^0$ modulates the robot's state space through the non-linear function :
+% \begin{equation}
+%   \phi^s (\xi; \xi^0,r^0) = \left( 1 + \frac{\left( r^0 \right)^2}{(\xi - \xi^0)^T (\xi - \xi^0)} \right) (\xi - \xi^0) \label{eq:obstacleModulation}
+% \end{equation}
+
+\subsection{Algorithm}
+A dynamical modulation matrix $M(\cdot)$ is introduced which is applied on the original DS to obtain the real-time avoidance of an obstacle:
+\begin{equation}
+\dot \xi = M(\xi; \xi^0, r^0 ) f(\xi) \label{eq:modulatedDS}
+\end{equation}
+This modulation matrix $M(\xi; \xi^0, r^0 )$ deforms the temporal evolution, such that it never collides with the object. An ideal matrix has a large effect close to the obstacle and approximates to the identity matrix $I$ far away ($\| \tilde \xi \| \rightarrow \infty$), and hence has no effect on the original DS.
+
+\subsubsection{Modulation Matrix}
+% The Jacobian of modulation of the state space by the obsatanacles given (Eq.~\ref{eq:obstacleModulation}) meets these properties:
+% \begin{equation}
+% \nabla \phi_s (xi; \xi^0, r^0) = I + \left( \frac{r^0}{\tilde \xi^T \tilde \xi}\right)^2 (\tilde \xi^T \tilde \xi I - 2 \tilde \xi \tilde \xi^T)
+% \end{equation}
+% The Jacobian can therefore by used as dynamic modulation matrix in obstacle avoidance:
+% \begin{equation}
+% M^S (\xi; \xi^0, r^0) = \nabla \phi_s (\xi; \xi^0, r^0)
+% \end{equation}
+
+For a general convex obstacle the modulation matrix is constructed as:
+\begin{equation}
+  M(\tilde \xi) = E(\tilde \xi) D(\tilde \xi) E^{-1}(\tilde \xi) \label{eq:modMatrix}
+\end{equation}
+with  the basis vectors $E(\tilde \xi)$ and the associated eigenvalues $D(\tilde \xi)$. The basis vectors
+\begin{equation}
+  E(\tilde \xi) =
+  \begin{bmatrix}
+    \vec n(\tilde \xi) & \vec e^1(\tilde \xi) & ... & \vec e^{d-1}(\tilde \xi)
+  \end{bmatrix}
+\end{equation}
+In the resulting orthogonal set of vectors (Fig.~\ref{fig:khansari_baseVectors}) the first vector $\vec n$ is the normal to the tangential hyper-plane of the obstacle, while the others $\vec e^1, \hdots, \vec e^{d-1}$ are part of the tangential hyper-plane. They are constructed as a set of (d-1) linearly independent vectors which represent the obstacle's tangential plane. One particular set of such vectors $\vec e^1, \hdots , \vec e^{d-1}$ is:
+\begin{equation}
+  e_j^i (\tilde \xi) =
+  \begin{cases}
+    - \frac{\delta \Gamma (\tilde \xi)}{\delta \xi_i} \hspace{0.2cm}  & j=1 \\
+    \frac{\delta \Gamma (\tilde \xi)}{\delta \xi_1} \;  &j=i \neq 1 \\
+    0 \; & j\neq 1, \; i \neq j
+  \end{cases}
+  i \in {1..d-1}, j \in {1,..,d} \label{eq:eigValues}
+\end{equation}
+The associated eigenvalues are given as:
+\begin{equation}
+  D(\tilde \xi) =
+  \begin{bmatrix}
+     \lambda_1 & & 0 \\
+     & \ddots &  \\
+    0 & & \lambda_d \\
+  \end{bmatrix}
+  \quad \text{with} \quad
+  \lambda_i =
+  \begin{cases}
+    1- \frac{1}{|\Gamma(\tilde \xi)|} \quad i =1 \\
+    1 + \frac{1}{|\Gamma(\tilde \xi)|} \quad \text{otherwise}
+  \end{cases}
+\end{equation}
+those are constructed to remove any velocity in normal direction and increase the tangent velocity when being close to the surface.
+
+
+\begin{figure}[tb]\centering
+\begin{subfigure}{.56\columnwidth} %
+\centering
+\includegraphics[width=1\columnwidth]{fig/khansari_baseVectors_scrSht.png}
+\caption{Base vector 3-D \cite{khansari2012dynamical}}
+\label{fig:khansari_baseVectors}
+\end{subfigure} %
+\begin{subfigure}{.42\columnwidth} %
+\centering
+\includegraphics[width=1\columnwidth]{fig/avoidingEllipse_DMM_ERF_rotTrans.eps}
+\caption{Base vectors 2-D.}
+\label{fig:avoidingEllipse_DMM}}
+\end{subfigure} %
+\label{fig:baseVectors}
+\caption{Illustration of the tangential hyper-plane and the basis vectors on the surface of a 3-D object (a). In two dimensions (b) the original DS system (gray) is modulated based on the normal vector (red) and the tangent vector (green) to get a obstacle avoiding DS (blue).}
+\end{figure}
+
+\subsubsection{Impenetrability}
+Intuitively, impenetrability is checked by analyzing the behavior of the modulation matrix for boundary points $\xi \in \mathcal{X}^b$ and with the level function $\Gamma(\tile \xi) = 1$. As a result of this the eigenvalues are:
+\begin{equation}
+  \lambda_i =
+  \begin{cases}
+    0 \qquad & i = 1 \\
+    2 \qquad & \text{otherwise}
+  \end{cases}
+\end{equation}
+In such a case, the vector field in the normal direction $\vec n$ vanishes, while it doubles in tangential direction. A more extensive proof of impenetrability can be found in \cite{khansari2012dynamical}. \hfill $\blacksquare$
+
+\subsubsection{Extension to Dynamic Obstacles}
+Let us consider an obstacle $\Gamma(\tilde \xi)$ that is moving with linear and rotational velocityies $\dot \xi_L^o$ and $\dot \xi_R ^o$, respectively. In \it has been shown that the modulated dynamics become:
+\begin{equation}
+  \dot \xi = M(\tilde \xi) (f(\cdot) - \dot\xi_L^o - \dot \xi_R^o \times \tilde \xi)  +\dot \xi^o_L + \dot \xi_R^o \times \tilde \xi
+\end{equation}
+where $(\cdot) \time (\cdot)$ denotes the cross product. It could be shown, that this equation ensures impenetrability for any convex, single moving obstacle. Further extension to include several obstacles and reduce the effect of the angular velocity are proposed in \cite{khansari2012realtime,}.
+\subsection{Results}
+A static circle can be avoided using DMM without collision (Fig.~\ref{fig:oneStaticCirc_DMM}). It can be observed, that the trajectories turn left or right in front of the obstacle to follow the shortest path. \\
+%The simulation of DS with a limit cycle using DMM does not show any collision with the object (Fig.~\ref{fig:limitCycle_ellipsoid_fig}). The obstacles are avoided in a efficient way all rajectories seem to converge to the limit cycle within the time interval displayed
+The simulation of a DS containing an initial limit cycle of the form of an ellipse (Fig.~\ref{fig:limitCicle_twoObst_DMM_time0}) where two obstacles are placed on the limit cycle shows that DMM manages to converge to a new limit cycle. This new limit cycle avoids the obstacles, at positions where it close to an obstacle, but is equal to the initial limit cycle further away from the obstacles.
+\begin{figure}[tb]\centering
+% \begin{subfigure}{.48\columnwidth} %
+% \centering
+% \includegraphics[width=\textwidth]{fig/oneStaticCirc_DMM_time0.eps}
+% \caption{Avoiding a circle in an original DS with a single attractor.}
+% \label{fig:oneStaticCirc_DMM}
+% \end{subfigure}\,\, %
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/limitCicle_twoObst_DMM_time0.eps}
+\caption{Avoiding two ellipses in an original DS with a limit cycle.}
+\label{fig:limitCicle_twoObst_DMM_time0}
+\end{subfigure}
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/staticEllipse_DMM_time0.eps}
+\caption{Avoiding a elongated ellipse in linear DS with single attractor.}
+\label{fig:staticEllipse_DMM_time0}
+\end{subfigure}
+\caption{Using DMM to avoid static obstacles in different DS.}
+\label{fig:static_DMM}
+\end{figure}
+
+
+% \begin{figure}[tb]\centering
+% \begin{subfigure}{.48\columnwidth} %
+% \centering
+% \includegraphics[width=\textwidth]{fig/twoMovingRotatingObs_DMM_time0.eps}
+% \caption{The modulated DS at initial conditions.}
+% \label{fig:twoMovingRotatingObs_DMM_time0}
+% \end{subfigure}\,\, %
+% \begin{subfigure}{.48\columnwidth} %
+% \centering
+% \includegraphics[width=\textwidth]{fig/twoMovingRotatingObs_DMM_time2.eps}
+% \caption{The modulated DS after 2 seconds.}
+% \label{fig:twoMovingRotatingObs_DMM_time2}
+% \end{subfigure}
+% \caption{DMM at different time steps of obstacles with linear velocity (purple arrow) and angular speed (red arrow). }
+% \label{fig:twoMovingRotatingObs_DMM}
+% \end{figure}
+
+When using DMM to avoid two moving and rotating obstacles (Fig.~\ref{fig:twoMovingRotatingObs_DMM}) the algorithm does not always seem to choose the optimal path. For the smaller obstacle, the DS is  modulated in such a way, that trajectories seem to  avoid the obstacle by moving in front of it in direction of the velocity (Fig.~\ref{fig:twoMovingRotatingObs_DMM_time2}). Even if this obstacle was static, this would be an unnecessary long path. Moreover, if we imagine a simulation where the robots follow such a trajectory in front of the obstacle, it  would be pushed further in direction of the velocity, which results in an even longer avoidance path.\\
+Additionally, a local minimum on the long side of the ellipse can be observed. During simulation, such a local minimum would be exited by switching to \textit{contouring} mode \cite{khansari2012dynamical}.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

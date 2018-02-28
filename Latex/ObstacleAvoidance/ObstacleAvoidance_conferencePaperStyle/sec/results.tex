@@ -1,0 +1,48 @@
+\section{Comparison Algorithms} \label{sec:comparison}
+\subsection{Metrics}
+% & $\ddot{\bar \xi} \, [m2/s2]$ & $N_{pen} \, [\%]$ & $T_{pen} []$ & $T_{conv} [s]$ & $D_{conv} [m]$ & $\hat E_{conv} [J/kg]$ & $T_{comp} [ms]$ \\ \hline
+Various metrics are defined in order to quantify the performance of the different obstacle avoidance algorithms based on DS.
+
+\subsubsection{Square of the Relative Change of the DS}
+The square of the relative change ($SRC$) gives information on how much the modulated DS $\dot{\bar \xi}$ changed compared to the original DS $\dot \xi$. It is evaluated at several points in space, before it is summed over dimensions $j$ and the samples $i$:
+\begin{equation}
+SRC = \sum_i \sum_j \left( \dot{\hat{\xi}}_j(\xi) - \dot{\xi}_j(\xi) \right)^2
+\end{equation}
+In general, the original DS should be modulated as little as possible, while avoiding the obstacle without collision. A low $SRC$ is therefore preferred.
+
+\subsubsection{Penetration Time and Occurrence} This metric observes trajectories based on different starting points during a simulation. The penetration occurrence $N_{pene}$ indicates the percentage of trajectories which collide with the object's boundary; the penetration time $T_{pen}$ shows for how many time steps a penetrating trajectory stayed inside an object's boundary on average. (It is 0 if no penetration occurred.)
+
+\subsubsection{Convergence Time, Distance and Relative Energy}
+This metric is used in linear and stable DS with a single attractor, but could be extended to limit cycles or DS with several attractors. Convergence is reached when a trajectory is within $r_\epsilon$ of the stable attractor for several consecutive time steps. The convergence time $T_{conv}$ is the simulation time when the robot reaches convergence and the convergence distance is the sum of the discrete distance steps of its trajectory until convergence is reached:
+\begin{equation}
+D_{conv} = \sum_{i=1}^{i_{conv}} \left| \xi_i -\xi_{i-1} \right|
+\end{equation}
+where $i_{conv}$ is the simulation step at convergence. \\
+The convergence relative energy is the energy it takes to reach the convergence region. It is evaluated as the discrete acceleration multiplied with the distance integrated over time. Where the acceleration is the numerical derivative of the velocity:
+\begin{equation}
+\hat E_{conv} = \sum_i \ddot{\xi}(\xi_i) \cdot \Delta \xi_i = \sum_i \frac{\dot{\xi}(\xi_i) - \dot{\xi}(\xi_{i-1})}{\Delta t} \cdot \left( \xi_i - \xi_{i-1} \right)
+\end{equation}
+
+\subsubsection{Computational Cost, Memory usage and Complexity}
+An important aspect of an online algorithm is its computational cost. While it is hard to compare the different operations and algorithms theoretically, the computational time $T_{comp} [ms]$ can easily be measured during the execution. The computational time is expected to increase with increasing computational cost. \\
+Memory usage of the algorithm is not observed, but it is expected to be low for all of them, because the DS are evaluated with functions and no big data sets are stored. \\
+Moreover, the computational complexity is simplified by the number of code lines in the implementation of the algorithms.
+
+
+\subsection{Results}
+Further simulations are executed to compare the algorithms' performance both qualitatively and quantitatively in this section.
+
+\input{input/multipleStaticEllipses}
+
+\input{input/fastMovingEllipse}
+
+\input{input/leftMovingCircle}
+
+\input{input/rotatingObstacle}
+
+\input{input/quantitativeComparison}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

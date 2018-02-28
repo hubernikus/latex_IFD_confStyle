@@ -1,0 +1,59 @@
+%!TeX spellcheck = en_US
+%!TeX encoding = UTF-8
+%!TeX root = ../report.tex
+
+\section{Introduction} \label{sec:introduction}
+In classical robotics, real time path planning is often used to operate the platforms. Based on the position and goal, a path is planned along which the controller tries to move the robot. In case of a disturbance, which can be of various form (a human walking in front of a factory robot or a unmanned drone been by a wind gust) the robot has to recover. A classical controller tries to reevaluate the motion. But replanning is expensive, and therefore there are two possibilities: stop and wait for the path planning to finish, or to go back to the position before the disturbance. In either way, this results in a quirky, unnatural motion, which robots are  known for. \\
+A more recent approach to tackle this problem is based on Dynamical Systems (DS), in order to evaluate the desired velocity. This allows for a dynamic adaptation of the motion and fast replanning. Moreover, the resulting movement resembles human like motion. An important aspect is, that a well chosen DS is continuously defined and ensures the completion of the task. Furthermore the robot can instantly adapt to a changing environment without performing an expensive replanning of a path.\\
+
+DS have emerged as one of the most general and flexible ways to represent motion plans for robotic applications. In contrast to classical architectures, where a robot is usually programmed to track a given reference position trajectory as accurately as possible, in DS representations the static reference trajectory is replaced by one which unfolds as the task progresses. \\
+DS based approaches to robot control offers robustness and smooth adaptation to real-time perturbations. The robot motion in a DS unfolds in time with no need to re-plan \cite{khansari2012dynamical} \\
+The state variable $\xi  \in \mathbb{R}^d $ defines the the state of robotic system. Its temporal evolution $\dot \xi$ may be given by either an autonomous (time-invariant) or non-autonomous (time-varying) DS as described in:
+\begin{align} \label{eq:DS_sys}
+  &\dot \xi = f(\xi) & \;\; & f: \mathbb{R}^d \mapsto \mathbb{R}^d & \;\; & \text{autnonomous DS}\label{eq:DS_sys} \\
+  &\dot \xi = f(t,\xi)& \;\; &  f: \mathbb{R}^+ \times \mathbb{R}^d \mapsto \mathbb{R}^d & \;\; &  \text{non-aut. DS} \label{eq:DS_sys2}
+\end{align}
+
+where $f(\cdot)$ is a continuous function. \\
+
+Moreover, there is special class of autonomous DS are the linear DS with a single attractor at $\xi^a$ defined as:
+\begin{equation}
+\dot \xi = f_l(\xi) \quad \text{with:} \;\; \frac{f_l(\xi)}{\| f_l(\xi) \|}  = \frac{-(\xi - \xi^a)}{\| \xi - \xi^a\|} \label{eq:DS_lin}
+\end{equation}
+these play an important role in robotics. They are often used, for a task where the robot has to reach a goal position, because they use the most direct path. Examples for these are pick and place tasks, or button push tasks. They analysis of the algorithm in this paper will be focusing on this class of DS.
+
+\section{Related Work}
+Obstacle avoidance is an old problem in robotics and many approaches have been proposed. It is often differentiated between global and local methods. Global methods are referred to as path planning; different methods are used in \cite{kavraki1996probabilistic,lozano1983spatial}. While they guarantee to find a feasible solution if there exists one, most of the algorithms are computationally expensive \cite{toussaint2009robot}. As a result, they were developed and used as off-line algorithms only applicable in static environments. This limitations was overcome by online (partial) replaning \cite{ferguson2006replanning,}.
+
+In contrast, local methods apply a \textit{deformation}, which is a real-time path adaptation through local reshaping of the planned trajectory without the use of the global path planning algorithm. The \textit{elastic band} algorithm is such a method \cite{quinlan1993elastic, brock2002elastic}, which adapts the plan through local energy minimization. While these methods allow fast remapping, it is not guaranteed that a feasible solution is found.
+
+A solution for this problems are hybrid algorithms, which combine global path planning and local obstacle avoidance \cite{yoshida2011reactive}. They allow to switch to a global algorithm, when the local one fails to find a feasible solution. Conversely, they use the local inner loop while a global, computational complex path planning is under process. It is to notice, that the hybrid algorithms provide a closed form solution to avoid the obstacles \cite{vannoy2008real,}.
+
+Another local method is the introduction of an artificial potential field, where each obstacle is represented by a potential function \cite{rimon1992exact}. This  method was extended to dynamic environment and was applied on a robot arm, where a collision free path for all links could be computed and followed in experiments \cite{khatib1986real}. While a collision free path can be guaranteed by defining an infinite potential at obstacle boundaries, the convergence to the global minimum is not ensured. In fact, it can be shown that a smooth vector field will have at least as many stationary points as obstacles; in the ideal case with good choice of the obstacle fields those equilibrium are saddle points, in the worst case they are local minima \cite{koditschek1990robot}.
+
+Local extrema can be removed, while ensuring global avoidance by taking inspiration in the description of the dynamics of fluids around impenetrable obstacles. The analytical description of the harmonic functions, which are used to describe the stream lines around the obstacles, can be used to control robots. An important property of harmonic functions is, that all minima and maxima are on the boundaries of the space \cite{kim1992real}. This was used in the control of a 3DOF robot, but was limited to static objects, further, only one obstacle is considered at a time \cite{guldner1993sliding}. It was extended to moving obstacles with constant velocities (translational and rotational) \cite{feder1997real}.
+%Harmonic potential based methods are powerful in  that they do not have local minima.The traditional potential function can be augmented to take the stream function of the field into account \cite{daily2008harmonic}.While this method allows the avoidance of circular obstacles, it fails to avoid combined obstacles.
+
+More recent approaches use DS for the implementation of obstacle avoidance algorithms, e.g. \cite{ijspeert2002movement,khansari2012dynamical}. For example a biological inspired approach includes the use of DS for movement planing for the control of robots, where it allows for robust motion planing in the presence of disturbances, while having dynamic human-like motion. The model was extended with description of human obstacle avoidance,  this allows the avoidance of several point like obstacles \cite{hoffmann2009biologically}.
+
+Modification of the original DS can be done by local rotations \cite{kronander2015incremental}. This is used to improve a learned DS (through various machine learning algorithms) to perform tasks such as writing letters. The local rotation can also be used to locally modulate a linear DS and therefore enforce a robot to follow a specific path. This procedure of local rotation of the DS has not been used for the specific task of obstacle avoidance so far.
+
+Using harmonic functions for obstacle avoidance with DS allows to create smooth trajectories for point-robots around circular obstacles \cite{waydo2003vehicle}. While this method was originally introduced to create smooth paths for less agile robots such as airplanes, it can be extended to smooth path generation for any platform. A dynamic modulation matrix was used to adapt the DS in \cite{khansari2012realtime,}, which allowed to avoid convex static obstacles. The algorithm has been extended to moving obstacles in \cite{khansari2012dynamical}. It was successfully implemented on an arm manipulator to avoid a single, fast approaching obstacle. Local minima of the harmonic function which describes the modulated DS only appear on the obstacle's boundary. The minima are exited by switching to a different control mode until the robot is attracted to the global minimum. Concave obstacles are treated conservatively by creating a convex hull around them. Moreover, an analytic description of the obstacle is needed for this algorithm, which is often computationally expensive to find. \\
+The approach could be extended to an obstacle description based on point clouds \cite{saveriano2013point,}. Besides, the adapted algorithm allowed to avoid concave obstacle in discrete space; which was tested by picking objects out of a (concave) box. A second adaptation of the algorithm to moving obstacles was achieved  \cite{saveriano2014distance}.
+
+
+% with its help the DS is modulated to avoid the obstacle. The important aspect is, that the matrix has no effect far away from the obstacle, but close to the obstacle it has to remove the radial velocity. The algorithm is implemented for ellipse like obstacle, but can be extended to any convex obstacle. No solution is proposed for concave obstacles, apart from forming a convex hull. A similar modulation matrix and the use of DS has been proposed in \cite{saveriano2014distance,saveriano2014distance,} to avoid obstacles. The algorithm allows the adaptation of safety margin, reactivity and introduces the possibility to stop the modulation in the wake of an obstacle. The extension to moving obstacles ensures a collision free trajectory by ease the avoidance around the wake of the obstacle.
+
+
+This report at hand starts with a brief description and analysis of obstacle avoidance with a dynamic modulation matrix as proposed by \cite{khansari2012dynamical} in Sec.~\ref{sec:DMM}. It continues with the description and analysis of the algorithm developed by the authors of this report with obstacle avoidance inspired by fluid dynamics, as presented in Sec.~\ref{sec:IFD}. %Furthermore, obstacle avoidance by local rotation of space is mentioned in Sec.~\ref{sec:LRS} but further analyzed in the appendix. A more extensive qualitative and quantitative comparison of the two main algorithms is performed in  Sec.~\ref{sec:comparison} with the help of further simulations.
+This is followed by discussion (Sec.~\ref{sec:discussion}) and the conclusion.
+% \todo{make more}
+
+
+%\cite{saveriano2013point}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

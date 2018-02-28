@@ -37,7 +37,7 @@ cups-MediaType=PLAIN
 cups-job-priority=50
 cups-DotGAdjust=Default
 cups-TSwitch=Default
-printer=EPFL_Color
+printer=Brother-DCP-7030
 evince-print-setting-page-autorotate=true
 cups-BindMode=Default
 cups-CNOutput=Auto
@@ -73,6 +73,12 @@ resolution-x=600
 resolution-y=600
 cups-brlaserEconomode=False
 cups-Resolution=600dpi
+
+cups-halftone=default
+cups-Quality=normal
+cups-NupPages=1up
+cups-NupOrient=port
+cups-Density=Density3
 
 [Page Setup]
 PPDName=A4

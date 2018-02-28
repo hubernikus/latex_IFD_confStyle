@@ -2,14 +2,33 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/input/" . "auto/")
+ ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm_python/" . "DynamicalSystem/")
+ ("/home/lukas/Latex/presentation_obstacleAvoidance/docstyle/" . "auto/")
+ ("/home/lukas/Latex/ObstacleAvoidance/" . "input/")
+ ("/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/" . "input/")
  ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm/" . "lib_obstacle_avoidance/")
  ("/home/lukas/Code/AirborneWindEnergy/" . "steadyState_modes/")
- ("/home/lukas/Latex/" . "test/")
+ ("/home/lukas/Latex/" . "ObstacleAvoidance_conferencePaperStyle/")
  ("/" . "usr/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/sec/"
+ "/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/"
+ "/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm_python/"
+ "/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/input/"
+ "/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm_python/DynamicalSystem/"
+ "/home/lukas/Latex/ObstacleAvoidance_semesterProject/TechnicalReport_LRS/sec/"
+ "/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/sec/"
+ "/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/input/"
+ "/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/"
+ "/home/lukas/Latex/presentation_obstacleAvoidance/frames/"
+ "/home/lukas/Latex/ObstacleAvoidance/input/"
+ "/home/lukas/Latex/presentation_obstacleAvoidance/"
+ "/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/docstyle/"
+ "/home/lukas/Latex/ObstacleAvoidance/chap/"
  "/home/lukas/Code/AirborneWindEnergy/python/lib/"
  "/home/lukas/Code/AirborneWindEnergy/python/"
  "/home/lukas/Latex/AirbornWindEnergy/chap/"
@@ -25,20 +44,70 @@
 
 ;; ----- ido-work-file-list -----
 (
- "visual_lib.py"
- "plot_aircraft.py"
- "equilibriumSearch_steadyMotion.py"
- "quatlib.py"
- "nonLinContr_lib.py"
- "controllib.py"
- "motionSimulation_3D.py"
- "appendix.tex"
  "introduction.tex"
- "airplaneModel.tex"
+ "OA_dynamicModulationmatrix.tex"
+ "OA_localRotationOfSpace.tex"
+ "OA_inspiredByFluidDynamics.tex"
+ "discussion.tex"
+ "appendix.tex"
+ "bibliography.bib"
+ "obstacleAvoidance_lib.py"
+ "simulationVectorFields.py"
+ "ellipsePlacementLib.py"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/" (23188 33115 413188 597000) "input/" "main.log" "../" "docstyle/" "main.blg" "main.bcf" "main.tex" "sec/" "SemesterProject_LukasHuber_obstacleAvoidance_v3.pdf" "ObstacleAvoidance_LukasHuber_v20180126.pdf" "fig/" "main.bbl" "./" "main.pdf" "main.synctex.gz" "bibliography.bib" "ObstacleAvoidance_LukasHuber_v20180214.pdf" "main.aux" "root.tex" "auto/" "main.run.xml")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/sec/" (23188 33113 629224 733000) "../" "introduction.tex" "appendix.tex" "discussion.tex" "results.tex" "acknowledgment.tex" "./" "OA_inspiredByFluidDynamics.tex" "OA_localRotationOfSpace.tex" "OA_dynamicModulationmatrix.tex" "nomenclature.tex" "auto/" "algorithmOld.tex")
+
+ ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm_python/" (23181 5596 965275 199000) "dynamicalSystem_lib.py" "../" "__pycache__/" "./" "ellipsePlacementLib.py" "obstacleAvoidance_lib.py" "DynamicalSystem/" "simulationVectorFields.py")
+
+ ("/home/lukas/.ipython/profile_default/" (23181 2695 271643 135000) "../" "ipython_kernel_config.py" "startup/" "history.sqlite" "security/" "./" "db/" "log/" "ipython_config.py" "pid/")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/input/" (23178 35905 659308 964000) "table_twoMovingRotatingObs.txt" "../" "fastMovingEllipse.tex" "nonpenetrability_ellipse.aux" "quantitativeComparison.tex" "nonpeneetrability_ellipse.tex" "multipleStaticEllipses.tex" "multipleStaticEllipses.log" "./" "leftMovingCircle.tex" "*scratch*" "rotatingObstacle.tex" "auto/" "pseudoCode_IFD.txt")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_semesterProject/conferencePaper/input/auto/" (23173 53661 399678 631000) "../" "fastMovingEllipse.el" "rotatingObstacle.el" "quantitativeComparison.el" "./" "multipleStaticEllipses.el" "leftMovingCircle.el")
+
+ ("/home/lukas/Code/MachineLearning/ObstacleAvoidanceAlgroithm_python/DynamicalSystem/" (23173 60707 983950 521000) "../" "./" "linearAttractor.py")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_semesterProject/TechnicalReport_LRS/sec/" (23173 54278 120088 446000) "../" "./" "OA_localRotationOfSpace.tex" "auto/")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_semesterProject/TechnicalReport_metrics/" (23173 54327 435154 195000) "input/" "main.log" "../" "docstyle/" "main.blg" "main.bcf" "main.tex" "sec/" "SemesterProject_LukasHuber_obstacleAvoidance_v3.pdf" "ObstacleAvoidance_LukasHuber_v20180126.pdf" "fig/" "main.bbl" "./" "main.pdf" "main.synctex.gz" "bibliography.bib" "ObstacleAvoidance_LukasHuber_v20180214.pdf" "main.aux" "root.tex" "auto/" "main.run.xml")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/sec/" (23172 7627 798894 997000) "../" "introduction.tex" "appendix.tex" "discussion.tex" "results.tex" "acknowledgment.tex" "./" "OA_dynamicModulationmatrix.log" "OA_inspiredByFluidDynamics.tex" "OA_localRotationOfSpace.tex" "OA_dynamicModulationmatrix.tex" "discussion.log" "nomenclature.tex" "test.txt" "auto/" "algorithmOld.tex" "OA_inspiredByFluidDynamics.log")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/input/" (23172 7298 203066 203000) "table_twoMovingRotatingObs.txt" "../" "fastMovingEllipse.tex" "nonpenetrability_ellipse.aux" "quantitativeComparison.tex" "nonpeneetrability_ellipse.tex" "multipleStaticEllipses.tex" "multipleStaticEllipses.log" "./" "leftMovingCircle.tex" "rotatingObstacle.tex" "auto/" "pseudoCode_IFD.txt")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/" (23172 6842 521801 234000) "input/" "main.log" "../" "docstyle/" "main.blg" ".git/" "main.bcf" "main.tex" "fig_backup/" "sec/" "SemesterProject_LukasHuber_obstacleAvoidance_v3.pdf" "ObstacleAvoidance_LukasHuber_v20180126.pdf" "fig/" "main.bbl" "./" "main.pdf" "main.synctex.gz" "bibliography.bib" "main.aux" "root.tex" "auto/" "main.run.xml")
+
+ ("/home/lukas/Code/ObstacleAvoidance/RandmoTree/" (23166 59903 785463 284000) "../" "avoidObstacle.py" "./")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_litteratureReview/" (23153 61030 74539 533000) "main.log" "../" "main.blg" "main.bcf" "main.tex" "main.bbl" "./" "main.pdf" "main.synctex.gz" "main.aux" "auto/" "main.run.xml")
+
+ ("/home/lukas/Latex/" (23152 56911 368414 305000) "Personal/" "../" "ObstacleAvoidance_conferencePaperStyle/" "Old/" "SensorOrientation/" "./" "presentation_agileFlightControl/" "presentation_obstacleAvoidance/" "ieeeconf/" "ObstacleAvoidance/" "AirbornWindEnergy/" "ObstacleAvoidance_litteratureReview/" "CheatSheets/")
+
+ ("/home/lukas/Latex/presentation_obstacleAvoidance/frames/" (23147 1153 586344 924000) "../" "introduction.tex" "localRotationOfSpace.tex" "appendix.tex" "tot.tex" "steadyStateMotion.tex" "khansari.tex" "results.tex" "model.tex" "old/" "outlook.tex" "./" "old.tex" "furtherResearch.tex" "systemDynamics.tex" "metrics.tex" "appendix.log" "controller.tex" "auto/" "fluidDynamics.tex")
+
+ ("/home/lukas/Latex/presentation_obstacleAvoidance/docstyle/auto/" (23133 62924 420085 501000) "../" "./")
+
+ ("/home/lukas/Latex/presentation_obstacleAvoidance/docstyle/" (23133 62941 707758 156000) "../" "packages.tex" "./" "titlePage.tex" "auto/")
+
+ ("/home/lukas/Latex/presentation_obstacleAvoidance/" (23146 64024 570057 31000) "bibliography.bib.blg" "main.log" "../" "videos/" "moveWindow.sh" "docstyle/" "main.blg" "main.snm" ".git/" "main.bcf" "main.tex" "fig/" "main.toc" "main..blg" "main.bbl" "Presentation_semesterProject_LukasHuber_v1.pdf" "./" "TextLukas.txt" "frames/" "texput.log" "main.pdf" "main.synctex.gz" "bibliography.bib" "main.nav" "main.aux" "auto/" "main.out" "main.run.xml")
+
+ ("/home/lukas/Latex/ObstacleAvoidance/input/" (23129 37113 72831 148000) "table_twoMovingRotatingObs.txt" "../" "fastMovingEllipse.tex" "quantitativeComparison.tex" "multipleStaticEllipses.tex" "./" "leftMovingCircle.tex" "rotatingObstacle.tex" "pseudoCode_IFD.txt")
+
+ ("/home/lukas/Latex/ObstacleAvoidance/" (23135 44580 821386 166000) "SemesterProject_LASA.aux" "input/" "SemesterProject_LASA.synctex.gz" "../" "docstyle/" "SemesterProject_LASA.pdf" "SemesterProject_LASA.blg" ".git/" "fig/" "SemesterProject_LASA.out" "./" "SemesterProject_LASA.toc" "bibliography.bib" "SemesterProject_LASA.lof" "img/" "SemesterProject_LASA.lot" "SemesterProject_LASA.log" "SemesterProject_LASA.bbl" "chap/" "auto/" "SemesterProject_LASA.tex")
+
+ ("/home/lukas/" (23140 64273 855821 842000) "Latex/" ".gconf/" "Desktop/" ".gtk-bookmarks" ".Xauthority" ".matlab/" "Public/" "../" "test~" ".fadein/" ".thunderbird/" ".Fade In" ".dbus/" ".java/" "sketchbook/" ".ros/" ".arduino/" ".mplayer/" ".erc/" ".pki/" ".jssc/" ".gnupg/" ".thumbnails/" ".bzr.log" ".oracle_jre_usage/" ".git/" "test" ".xinputrc" "Code/" "Software/" ".bashrc~" ".imwheelrc" "Pictures/" ".Genymobile/" ".bash_history" "KASOLA18_grobprogramm_v1.xlsx" "Logs/" ".bashrc" ".arduino15/" ".sudo_as_admin_successful" ".python_history" "ownCloud/" ".macromedia/" "Downloads/" "README.md" ".xsession-errors" "examples.desktop" ".profile" "bin/" ".kde/" "./" ".wget-hsts" ".emacs.d.pre-prelude.tar" "doc.pdf" "java.log.1508" "catkin_ws/" ".adobe/" ".local/" ".dmrc" "Discussion1.txt" ".compiz/" ".viminfo" ".android/" ".bash_logout" ".emacs.d/" "Arduino/" ".PyCharmCE2016.3/" ".lesshst" ".nano/" ".gitconfig" ".gnome2/" ".pylint.d/" ".rosinstall" ".profile~" ".aspell.en.pws" ".imwheelrc.swp" ".dropbox-dist/" ".aspell.en.prepl" ".emulator_console_auth_token" ".subversion/" ".ipython/" ".shutter/" "Documents/" ".cache/" "ffmpeg_source/" ".dropbox/" ".gimp-2.8/" ".xbindkeysrc" "Dropbox/" ".mozilla/" ".config/" ".ICEauthority" ".xsession-errors.old" ".vim/" ".pam_environment" ".xbindkeysrc~" ".hplip/" "Videos/")
+
+ ("/home/lukas/Latex/ObstacleAvoidance_conferencePaperStyle/docstyle/" (23135 46864 307839 780000) "../" "packages.tex" "./" "ieeeconf.cls")
+
+ ("/usr/share/texlive/texmf-dist/tex/latex/amsfonts/" (23007 51376 451927 600000) "cmmib57.sty" "ueus.fd" "../" "ueur.fd" "amssymb.sty" "euscript.sty" "ueuf.fd" "ueuex.fd" "eufrak.sty" "umsa.fd" "./" "umsb.fd" "amsfonts.sty" "eucal.sty")
+
+ ("/home/lukas/Latex/ObstacleAvoidance/chap/" (23135 15136 680413 390000) "../" "introduction.tex" "appendix.tex" "discussion.tex" "results.tex" "acknowledgment.tex" "./" "OA_inspiredByFluidDynamics.tex" "OA_localRotationOfSpace.tex" "OA_dynamicModulationmatrix.tex" "nomenclature.tex" "auto/" "algorithmOld.tex")
+
  ("/home/lukas/Code/AirborneWindEnergy/python/" (23132 11074 979417 959000) "../" "equilibriumSearch_steadyMotion.py" "asdf.png" "steadyState_longitudinal_gamma-30deg.yaml" "plot_aircraft.py" "model/" ".#motionSimulation_3D.py" "__pycache__/" "old/" "steadyState_longitudial_gamma10deg.yaml" "./" "numeric_MPC_simulation.csv" "steadyState_longitudial_gamma0.yaml" ".idea/" "lib/" "steadyState_longitudial.yaml" "motionSimulation_3D.py" "testing/" "steadyState_longitudial_gamma-30deg.yaml")
 
  ("/home/lukas/Code/AirborneWindEnergy/python/lib/" (23132 9317 791025 777000) "quatlib.py" "../" "__pycache__/" "aircraft_class.py" "old/" "./" "controllib.py" "visual_lib.py" "nonLinContr_lib.py")
@@ -78,8 +147,6 @@
  ("/home/lukas/Code/ProductDevelopement/LenseSimulation/" (23044 22093 122277 552000) "../" "lenseSimulation.py" "flycheck_lenseSimulation.py" "./")
 
  ("/home/lukas/Latex/test/" (23040 8723 496569 121000) "../" "Test.pdf" "Test.synctex.gz" "./" "Test.aux" "Test.log" "Test.tex" "Test.out" "auto/" "test.avi")
-
- ("/home/lukas/Latex/" (23036 13805 626592 497000) "Personal/" "../" "test/" "SensorOrientation/" "./" "AirbornWindEnergy/" "CheatSheets/" "SP_machineLearning_presentation/" "SemesterProject_machineLearning/")
 
  ("/home/lukas/Latex/SP_machineLearning_presentation/" (23040 8610 674774 931000) "main.log" "../" "main.snm" ".git/" "main.tex" "fig/" "main.toc" "./" "TextLukas.txt" "main.pdf" "main.synctex.gz" "old_main.tex" "animation/" "main.nav" "main.aux" "auto/" "main.out")
 

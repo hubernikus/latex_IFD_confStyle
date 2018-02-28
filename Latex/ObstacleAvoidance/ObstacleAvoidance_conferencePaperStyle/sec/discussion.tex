@@ -1,0 +1,40 @@
+\section{Discussion} \label{sec:discussion}
+%\subsection{DMM}
+
+% While the DMM avoids the obstacle without collision, it often chooses a non-intuitive path to avoid them. Additionally, these paths demand more changes to the initial DS than the one chosen by the IFD. In some cases, the DMM modifies the DS to converge to a local minimum on the obstacle boundary, rather than avoiding it. In these cases the DMM switches to a \textit{contouring}-mode and safely evades these local minima, but this is not an optimal way to avoid the object \cite{khansari2012dynamical}. Additionally, this is not a closed form solution.
+% The algorithm has not been extended to concave object. However some propositions exist for obstacles in discrete space represented by point clouds \cite{saveriano2013point}. \\
+% %\subsection{IFD}
+% The IFD has a lower value for the convergence distance, time and relative energy. Additionally, it modifies the original DS less (lower $ SRC $-value). On the other hand, it shows several collisions with the obstacle. Collisions occurred for the IFD in simulations with either several and close,  or fast moving and rotating obstacles. This is however expected to occur due to numerical issues or errors in the implementation, because stability could be proven (Sec.~\ref{sec:IFD}). An indication of numerical issues is the decreasing number of collisions with shorter time steps.
+
+%While the two algorithms, IFD and DMM, have different procedure, the math behind them is  similar. They both use a modulation matrix with similar eigenvalues which is applied to reduce the direction of the normal but keep tangential speed. The
+On the one hand, harmonic functions, which the IRF and DMM are based on, have the property, that equilibrium points only occur on the boundaries of the space \cite{kim1992real} On the other hand, a smooth vector field in a sphere world must have at least as many saddle points as obstacles \cite{koditschek1990robot}. As a result of this, these extrema must occur either on the obstacle boundary or the space limits. Such a saddle point can be observed on a circle in a stream function, where the stream line directly ahead of the obstacle will converge to the saddle point on the circle's surface. \\
+However, the DMM shows convergence of not just one but several trajectories to a locally stable point (local minimum). This problem of local minima does not appear for the IFD where only one trajectory converges to the saddle point, as it can be observed for a circular obstacle in two dimensional flow. \\
+The reason for this difference becomes clear when observing the base vectors used for the modulation (Fig.~\ref{fig:comparison_behaviour}). While the tangent (green) is the same with the IFD and the DMM, the normal (red) differs. However the normal and tangent create an independent set of vectors in both cases. \\
+The consequence of this can be observed by analyzing a specific point, e.g. (-1,-1.5) in Fig.~\ref{fig:avoidingEllipse_IFD_ERF}. We can see that the gradient for the corresponding normal (green) is steeper than the gradient of the DS (gray) for the IFD. As a result, for a linear combination based on the normal and tangent a positive value in direction of the tangent (green) is needed. Conversely, the gradient of the normal (red) is less steep for the DMM than the IFD, therefore a negative value in direction of the tangent (green) is needed for the linear combination of the original DS based on the tangent and normal. Close to the obstacle, the magnitude of the DS in direction of the normal is (partially) removed, as a result the modulated DS has a positive value in direction of the tangent for the IRF, but a negative value in direction of the tangent for the DMM. For the IRF the DS avoids the obstacle safely, while for the DMM it converges on the local minimum in front of it. \\
+
+For a linear DS with single attractor the DMM creates a local minimum on the ellipse boundary if it is placed in a bad way, as could be observed in several simulations (Sec.~\ref{sec:DMM}). On the other hand, the IFD creates a saddle point on the obstacles surface where only one trajectory converges to. The rest of the DS is safely modulated to converge to the attractor. This is clearly a better performance of the IFD compared to the DMM (One could still think of some nonlinear DS, where even the IFD creates a local minimum on the surface. Such cases are not treated in this report.)
+
+
+\subsection{Limitations}
+Most of the simulation in this report are performed using a linear DS with a single attractor, because its dynamics are simple and the modulation can be easily observed. For general performance analysis of the algorithms the algorithms should be applied to more complex, nonlinear DS. \\
+
+\subsection{Future Work}
+Future work should focus on the extension of the algorithms to concave objects. Even if the robots try to avoid those regions by creating a convex hull around them, a situation might occur where a concave region is formed by closely moving obstacles and the robots ends up in it. While there have been solutions proposed by \cite{saveriano2013point,}, they are for point clouds and no analytic solution exists.\\
+Furthermore, several moving obstacles should be observed and an algorithm to solve this should be implemented. \\
+Another important aspect to test stability is to add  noise and disturbances to the simulations. This allows to judge the stability of the algorithms and if it is implementable on real robots. \\
+The implementation of the algorithm on the ROS simulator and testing on real robots should be done to finally conclude about the performance of the algorithms. This has been done for the DMM \cite{khansari2012dynamical}. \\
+While the metrics give a good inside on the behavior of the algorithm, it should be evaluated which one is the most important for the robot's performance. Moreover, it should be evaluated how an algorithm should behave in extreme situations, e.g. when an obstacle is passing by close or being close close to a rotating obstacle.
+%\subsubsection{IFD}
+Different options for the choice of the eigenvectors $\labmda_i$ could be further observed. \\
+The reason for the frequent collisions should be further observed and a method should be found to ensure impenetrability in discrete space. \\
+Any future work should consult \cite{feder1997real,khansari2012realtime,khansari2012dynamical,saveriano2013point,saveriano2014distance,}, because those obstacle avoidance approaches use similar fluid dynamic based algorithms. Furthermore, they proposed and tested several methods for moving and concave methods.
+
+\section{Conclusion}
+%While there is no clear winner between the algorithms. The IFD seems to be the fastest algorithm, which does change the DS the least among the three. The DMM shows slightly more stable behavior, but has also fast converging solution. On the other hand, LRS seems to perform worse, with abrupt changes for implementation, lacking of convergence and the missing closed form makes it unfit for dynamical systems.  \\
+%Even though has the most collisions, we prefer it over the other algorithms and promote its implementation as it shows the most intuitive trajectory choice. The DMM on the other hand often converges to a local minimum in front of an obstacle. The LRS is with its current set of hyper-parameters not usable for obstacle avoidance with several obstacles an nonlinear DS.
+The IFD has clear advantage over the DMM for linear DS sytem with a single attractor which are often used in pick-and-place actions in robotics. While the DMM tends to create local minima on the obstacle boundary for ellipses, the IFD only has a saddle point for one trajectory and all but one of its trajectories converge. The strategy of not using orthogonal base vectors for the application of the modulation matrix shows a large improvement to the DMM. On the other hand, avoiding several, moving and concave obstacles need to be further observed,
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

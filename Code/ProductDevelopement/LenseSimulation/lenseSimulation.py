@@ -57,7 +57,7 @@ class Lense():
         elif self.convex < 0:
             self.rad_curve = -corr
             self.phi_lense = asin(self.rad_lens/self.rad_curve)
-            
+de            
             self.pos0 = [self.posx-(self.widthMin/2+self.rad_curve),
                          self.posx+(self.widthMin/2+self.rad_curve)]
 

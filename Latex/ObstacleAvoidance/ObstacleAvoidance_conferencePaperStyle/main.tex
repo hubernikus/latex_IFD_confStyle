@@ -1,0 +1,124 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[a4paper, 10pt, conference]{docstyle/ieeeconf}      % Use this line for a4 paper
+
+\IEEEoverridecommandlockouts                              % This command is only needed if
+                                                          % you want to use the \thanks command
+
+\overrideIEEEmargins                                      % Needed to meet printer requirements.
+
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+
+% Remove unofficial libraries
+\usepackage{subcaption} % allows subfigure
+\usepackage{todonotes} % todo notes for prototyping
+\usepackage{listings}
+\usepackage{algorithm}% http://ctan.org/pkg/algorithms
+\usepackage{algpseudocode}% http://ctan.org/pkg/algorithmicx
+
+% External bibliography --- For submittion include citation in file
+\usepackage[
+backend=biber,
+style=ieee,
+sorting=nty
+]{biblatex}
+\addbibresource{bibliography.bib}
+
+\title{\LARGE{ \bf{Avoidance of Static and Moving Obstacles}} \\
+Design and Simulation of Obstacle Avoidance Algorithms based on Dynamical Systems
+}
+
+\author{Lukas Huber$^{}$ $\cdot$ Aude Billard$^{}$ $\cdot$ Leonardo Urbano$^{}$  % <-this % stops a space
+%\thanks{*This work was not supported by any organization}% <-this % stops a space
+  \thanks{$^{}$ Learning Algorithms and Systems Laboratory, Swiss Federal Department of Technology in Lausanne (EPFL), Lausanne 1000, Switzerland
+ \tt \small {lukas.huber@epfl.ch}
+ \tt\small{aude.billard@epfl.ch;leonardo.urbano@epfl.ch}}
+}
+
+%\pagenumbering{arabic}
+
+\begin{document}
+\maketitle
+%\thispagestyle{empty}
+%\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+This report evaluates different obstacle avoidance algorithms based dynamical systems (DS). It introduces the modulation of DS and observes an existing algorithm which uses a dynamic modulation matrix (DMM). Two further algorithms are proposed and analysed:  obstacle avoidance inspired by fluid dynamics (IFD) and obstacle avoidance with local rotation of space (LRS). These three algorithms are compared in simulation by applying them to linear DS with a single attractor or DS with a limit cycle, static, rotating and moving obstacles are then placed in the DS. Furthermore, numerical metrics are introduced to quantitatively evaluate the performance of the algorithms. \\
+The IFD and DMM perform similarly based on computational cost and convergence distance. The IFD shows slightly better performance in therms of convergence energy and the IFD changes the DS less. The main disadvantage of the DMM is, that it often creates a local minimum on an ellipse boundary in a linear DS with a single attractor, while the IFD only creates a saddle point on the obstacle's boundary. The LRS is fundamentally different from the other algorithms and shows a very conservative behavior, but might be used in onboard obstacle avoidance or as a back up algorithm in case of the creation of a local minimum.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{sec/introduction}
+
+\input{sec/OA_dynamicModulationmatrix}
+
+\input{sec/OA_inspiredByFluidDynamics}
+
+% \section{Obstacle Avoidance through Local Rotation of Space (LRS)} \label{sec:LRS}
+% This algorithm is based on a modulation of the space by a loacal rotation as described by Kronander \cite{kronander2015incremental}. Where the modulation matrix is composed of a rotational part $R$ and a proportional part $(1+ \kappa)$ as follows:
+% \begin{equation}
+% M ( \xi ) = (1 + \kappa (\xi) ) \cdot R(\xi)
+% \end{equation}
+%  $\kappa(\xi)$ describes the scaling of the speed and $R(\xi)$ is the local rotation matrix.
+
+% \subsection{Limitations}
+% The rotation around an obstacle is an intuitive concept: one turns to avoid a pole which is in the way or steer a car to avoid a road bump. Analysis of this turning behavior yields, that it is linked to many factors. The proposed algorithm therefore resembles the description of the observed behavior of humans to avoid obstacles in \cite{hoffmann2009biologically}. The magnitude of the rotation is related to the distance to the obstacle. Additionally, the desired DS direction is based on position relative to the obstacle. Furthermore, the rotation of space needs to turn in both directions to achieve a split of the DS around the obstacle, as it would be observed for a large crowd which goes around both sides of a pole. While formula the local rotation is simple, the optimal choice of the parameters ($R$ and $\kappa$) is hard to define and largely position dependent on all the above factors.
+
+% Moreover, the final algorithm can not be written in close form but includes many parameters and conditions, which makes it hard to tune. The description and simulation result are discussed in detail in the Appendix. It is necessary to adapt and tune the algorithm before it can be implemented to reliably avoid obstacles. With variables used in this report, the algorithm shows conservative behavior, which could be useful to get out of local minima if the other algorithm (IRF /DMM) fail to avoid them. On top of that, it only takes information which can be observed by sensors placed on the robot. This allows online avoidance, needed on mobile robots such as drones or self driving cars.
+
+%\input{sec/results}
+
+\input{sec/discussion}
+
+% \section{CONCLUSIONS}
+% A conclusion section is not required. Although a conclusion may review the main points of the paper, do not replicate the abstract as the conclusion. A conclusion might elaborate on the importance of the work or suggest applications and extensions.
+
+
+\addtolength{\textheight}{-0cm}   % This command serves to balance the column lengths
+                                  % on the last page of the document manually. it shortens
+                                  % the textheight of the last page by a suitable amount.
+                                  % this command does not take effect until the next page
+                                  % so it should come on the page before the last. make
+                                  % sure that you do not shorten the textheight too much.
+
+                                  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                                  % \section*{appendix}
+\input{sec/appendix}
+
+% appendixes should appear before the acknowledgment.
+
+% \section*{acknowledgment}
+
+
+% the preferred spelling of the word òacknowledgmentó in america is without an òeó after the ògó. avoid the stilted expression, òone of us (r. b. g.) thanks . . .ó  instead, try òr. b. g. thanksó. put sponsor acknowledgments in the unnumbered footnote on the first page.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% references are important to the reader; therefore, each citation must be complete and correct. if at all possible, references should be commonly available publications.
+%\bibliographystyle{plain}
+\printbibliography
+
+% \begin{thebibliography}{99}
+% \bibitem{c1} g. o. young, òsynthetic structure of industrial plastics (book style with paper title and editor),ó 	in plastics, 2nd ed. vol. 3, j. peters, ed.  new york: mcgraw-hill, 1964, pp. 15ð64.
+% \bibitem{c2} w.-k. chen, linear networks and systems (book style).	belmont, ca: wadsworth, 1993, pp. 123ð135.
+% \bibitem{c3} h. poor, an introduction to signal detection and estimation.   new york: springer-verlag, 1985, ch. 4.
+% \end{thebibliography}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

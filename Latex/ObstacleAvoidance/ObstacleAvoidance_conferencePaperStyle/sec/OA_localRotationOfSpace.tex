@@ -1,0 +1,194 @@
+\appendix
+The Obstacle Avoidance through Local Rotation of Space (LRS) is extensively discussed in this appendix.
+
+\subsection{Local Rotation of Space}
+This algorithm is based on a modulation of the space by a rotation as described by Kronander \cite{kronander2015incremental}. Where the modulation matrix is composed of a rotational part $R$ and a proportional part $(1+ \kappa)$ as follows:
+\begin{equation}
+M ( \xi ) = (1 + \kappa (\xi) ) \cdot R(\xi)
+\end{equation}
+
+The rotational matrix in two dimensions is given as:
+\begin{equation}
+R(\xi ) =
+\begin{bmatrix}
+cos(\phi (\xi)) & -sin(\phi (\xi)) \\
+sin(\phi (\xi)) & cos(\phi (\xi))
+\end{bmatrix}
+\end{equation}
+
+The rotation angle is position dependent and given as:
+\begin{equation}
+\phi (\xi) = h(\xi) \phi_{max}(\xi)
+\end{equation}
+
+\subsection{Algorithm}
+The idea behind the algorithm, is to rotate the DS in front of an obstacle, such that it points around the object. It is to notice, that there needs to be a rotation in both directions, because the DS will be split to avoid the obstacle on both sides.\\
+Furthermore, the needed rotation is dependent on the original DS system, too. If this DS is pointing in the direction of the obstacle, it needs to be rotated to avoid it. On the other hand, if the DS is already pointing away from the obstacle, applying the same rotation might turn the DS towards to the obstacle and create a collision. \\
+The algorithm is designed to be able to avoid both concave and convex obstacles.
+
+\subsection{Parameter Definition}
+For the local rotation of space there are three positions dependent parameters ($\kappa$, $\phi_{max}$ and $h$).
+
+\subsubsection{Maximal Rotation}
+The maximal rotation $\phi_{max}$ needs to ensure that the system does not rotate too far, but it has to allow a rotation large enough to rotate away from the obstacle. Furthermore the direction of the maximal rotation should be chosen in such a way, such that the DS uses to shortest path when moving away from the obstacle. \\
+The rotation direction ensures that the DS rotates away from the angular centerline of the object. Where the angular center line (CL) is defined as the angle bisector between the two tangents of the object trough the current position. Furthermore, the maximal rotation is limited to never rotate the DS not further than being parallel to this center line.
+The maximal rotation can be found in three steps:\\
+\begin{enumerate}
+\item Direction of rotation: either clock- or anticlockwise, depending in which direction the local DS is pointing.
+  \begin{equation}
+    rotDir =
+\begin{cases}
+1 \qquad &  \text{if} \;\;\phi_{dx} - \phi_{CL} \geq 0 \\
+-1 \qquad &\text{otherwise}
+\end{cases}
+\end{equation}
+%rotDir = (\phi_{dx} - \phi_{centerline}) > 0 \qquad \text{with} \quad rotDir \in \{0, 1\}
+with $\phi_{CL}$ being the direction of the CL (as seen from the robot towards the obstacle) and $\phi_{dx}$ direction of the original dynamical system. \\
+
+\item The relative rotation of the velocity towards the center of the object has to be found:
+\begin{equation}
+\Delta \phi_{vel} = \phi_{dx} - \phi_{CL}
+\end{equation}
+
+\item Maximal rotation to prevent over rotating; where the maximum rotation $\phi_{max}$ aligns the original DS with the CL.
+\begin{equation}
+\phi_{max} = rotDir \cdot \pi - \Delta \phi_{vel}
+\end{equation}
+It is to notice, that the absolute value of the maximal rotation is always smaller than $\pi$.
+\end{enumerate}
+
+\textbf{Limitation}
+While the primary goal of the algorithm is to avoid obstacles, there are several possibilities to optimize its trajectory such as minimize the distance of the trajectories which avoid the obstacle; minimize the rotation of the DS to avoid the obstacle. Furthermore there are also several possible references to chose the rotation: center of mass of the obstacle, the CL of the obstacle, avoid the point on the surface with the largest distance, minimize the rotation of the original DS to reach an exit and even more. The best choice is expected to be the CL of the obstacle, but the possibilities should be further explored and an adaptation of the algorithm should be considered.
+
+\subsubsection{Influence of the Rotation}
+The influence of the maximal rotation $h(\xi)$ ensures that the effect of the rotation is large close to the object and decreases with increasing distance. Furthermore, the influence of the rotation is based on how much the initial DS needs to be rotated at minimum to reach the closest exit. Additionally there is no rotation, when the initial DS is already pointing away from the obstacle.
+\begin{equation}
+h(\xi ) =
+\begin{cases}
+h_0 ^{- \frac{d_{min}}{d_0} \cdot \left|\phi_{min}-\phi_{dx} \right|} \qquad &\text{if initial DS points to body} \\
+0 \qquad &\text{otherwise}
+\end{cases}
+\end{equation}
+with following parameters (In case of hyper parameters, the values used in the simulation of this work is given in the brackets.): \\
+$h_0$: maximal influence of the rotation $h_0 = 4$\\
+$d_{min}$: shortest distance to the body \\
+$d_0$: reference distance. $d_{0,convex} = 5 \,\mathrm{m}$, $d_{0,concave} = 20 \, \mathrm{m}$ \\
+$| \phi_{min}- \phi_{dx} |$:  minimal rotation of the dynamical towards the chosen exit with $\phi_{min}$ the angle of the tangent of the closest exit through the current position. \\
+
+\subsubsection{Scaling of Speed}
+For simplicity a new scalar factor $\hat \kappa$ is introduced:
+\begin{equation}
+\hat \kappa = ( 1+ \kappa )
+\end{equation}
+$\hat \kappa$ is strictly larger than 0, and results on an increase in velocity for $\hat \kappa > 1 $ and a decrease otherwise.
+\\
+The speed is increased with $\hat \kappa$ if the robot is in a concave region (to move away from the object, as quick as possible) and decreased if the region is convex (where it is save to stay in). The transition from speeding up to slowing down is done continuously, with no change in velocity in front of an infinite plane (concave and convex). \\
+Furthermore, the change of speed is more extreme when being evaluated close to the object and decreases with increasing distance.\\
+\begin{equation}
+\hat \kappa = \kappa_0 ^{\frac{2 \pi - \Delta \phi_{conv}}{\Delta \phi_0} \cdot \left(\frac{d_0}{d}\right)^n}
+\end{equation}
+with following variables (In case of hyper parameters, the values used in the simulation of this work is given in the brackets.):
+$\kappa_0$: default scaling factor ($\kappa_0 = 2$)\\
+$\Delta \phi$:  angle of the region, where the object can exit ( $\Delta \phi_0 = \pi$ which allows the seperation between concave, $\Delta \phi < \pi $, and convex, $\Delta \phi > \pi$) \\
+$\Delta \phi_0$: reference angle, which decides over speeding up or slowing down of the velocity \\
+$d$: shortest distance to the object, no scaling of the velocity for $d \rightarrow \infty$ \\
+$d_0$: reference distance for velocity scaling ($d_0 = 1 \,\mathrm{m}$) \\
+$n_d$: flattening/steepening of the velocity dependent curve  ($n_d = 1$ ) \\
+
+\subsection{Results}
+%\subsubsection{Static Obstacles}
+The LRS algorithm is able to avoid a static ellipse without collision (Fig.~\ref{fig:oneStaticCirc_LRS}). It shows conservative behavior for points with the initial DS pointing towards the obstacles, which are rotated  such that they move away from the attractor. As soon as the initial DS does not point towards the obstacle anymore, no modulation is applied and the modulated DS follows a straight path. This results in abrupt transition from being behind the obstacle to the free path. Moreover, the streamlines which start behind the obstacle merge when passing the obstacle.
+%\subsubsection{Static Limit Cycle}
+The simulation of a DS system with a locally stable limit cycle with LRS shows bad results (Fig.~\ref{fig:limitCicle_twoObst_LRS_time0}). The DS is rotated to avoid the obstacle, its streamlines move into the unstable region and then completely diverge. Only when moving away from the obstacles, similarities to the limit cycle of the original DS can be observed. The algorithms seems to show bad performance with nonlinear initial DS and handling several obstacles.
+\begin{figure}[tb]\centering
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/oneStaticCirc_LRS_time0.eps}
+\caption{Avoiding a circle in an original DS with a single attractor.}
+\label{fig:oneStaticCirc_LRS}
+\end{subfigure}\,\, %
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/limitCicle_twoObst_LRS_time0.eps}
+\caption{Avoiding two ellipses in an original DS with a limit cycle.}
+\label{fig:limitCicle_twoObst_LRS_time0}
+\end{subfigure}
+\caption{Using LRS to avoid static obstacles in different DS.}
+\label{fig:static_LRS}
+\end{figure}
+
+\subsubsection{Moving Obstacles}
+For a simulation of LRS with two moving and rotating obstacles (Fig.~\ref{fig:twoMovingRotatingObs_LRS}) shows a conservative behavior. No streamline which starts far away of the obstacles passes between them, but they  are either rotated clock or anti-clockwise to pass the obstacle. A straight line trajectory is followed again, once the objects are out of the way. On the other hand, the algorithm does not seem to be influenced largely by the moving obstacles, and its conservative behavior is expected to prohibit collision.
+\begin{figure}[tb]\centering
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/twoMovingRotatingObs_LRS_time0.eps}
+\caption{The modulated DS at initial conditions.}
+\label{fig:twoMovingRotatingObs_LRS_time0}
+\end{subfigure}\,\, %
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/twoMovingRotatingObs_LRS_time2.eps}
+\caption{The modulated DS after 2 seconds.}
+\label{fig:twoMovingRotatingObs_LRS_time2}
+\end{subfigure}
+\caption{LRS at different time steps of obstacles with linear velocity (purple arrow) and angular speed (red arrow). }
+\label{fig:twoMovingRotatingObs_LRS}
+\end{figure}
+
+%\subsection{Comparison}
+In linear DS with a single stable attractor and four static obstacles most of the trajectories of the LRS converge to a different local minimum  (Fig.~\ref{fig:singleAttractor_severalObstacles_LRS_time0}). This is expected to be a result of the conservative implementation of the LRS, where any movement towards an object is tried to be avoided even if it iss placed behind the linear attractor.
+
+The simulation of a DS with a single linear attractor with a fast, large ellipse moving along the second axis shows, that the LRS achieves to reach the attractor (Fig.~\ref{fig:fastMovingEllipse_LRS_time0}) . Furthermore, the DS is only disturbed behind the obstacle as seen from the attractor.  Moreover, the point where the DS converges to is off from the attractor in the direction opposite to the velocity.
+
+When a circular obstacle passes the origin, it can be seen that for the LRS algorithm, the global minimum is shifted slightly in the opposite direction of the velocity of the attractor. The distance is only small. On the other hand, it doesn't try to move away from the obstacle.
+
+The simulation of a rotating ellipse yields (Fig.~\ref{fig:rotating_circle_fig}), that the LRS shows similar behavior as it would if there was no rotation present: it avoids the obstacle when being behind it and moves in a straight line as soon as there is a clear path to the attractor.
+
+\begin{figure}[tb]\centering
+\begin{subfigure}{.48\columnwidth} %
+ \centering
+\includegraphics[width=\textwidth]{fig/singleAttractor_severalObstacles_LRS_time0.eps}
+\caption{Four static obstacles}
+\label{fig:singleAttractor_severalObstacles_LRS_time0}
+\end{subfigure}%
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/fastMovingEllipse_LRS_time13.eps}
+\caption{Fast translational moving obstacle}
+\label{fig:fastMovingEllipse_LRS_time0}
+\end{subfigure}
+
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/leftMoving_circle_LRS_time20.eps}
+\caption{Object moving close to origin}
+\label{fig:leftMoving_circle_LRS_time2}
+\end{subfigure}%
+\begin{subfigure}{.48\columnwidth} %
+\centering
+\includegraphics[width=\textwidth]{fig/rotating_ellipse_LRS_time28.eps}
+\caption{Single Rotating Object}
+\label{fig:rotating_ellipse_LRS_time0}
+\end{subfigure}
+\caption{LRS at different time steps of obstacles with linear velocity (purple arrow) and angular speed (red arrow). }
+\label{fig:twoMovingRotatingObs_LRS}
+\end{figure}
+
+\subsection{Discussion}
+LRS creates abruptly changing trajectories, because it tries aggressively not to move into the direction of the object and as soon as the path is free it moves in a straight line towards the attractor. This is similar to classical robot control, where re-planning is done after a change of external conditions. The functions might be changed to more smooth movement, but a closed form solution is hard to be found. \\
+Furthermore, LRS involves a high number of parameters, this makes tuning and optimizing all of them difficult. Additionally, different environment, DS and robot size might demand a different set of parameters; this results that the algorithm is not globally applicable without prior hyperparameter tuning. \\
+%The off the attractor which must be the result, a little bit off.
+% Rotating ellipse, cant judge right
+% quick, little disturbance once path reached.
+Even though, the algorithm had been implemented for a general form of obstacles, convex and concave, the simulation showed bad behavior for concave obstacles (and are not shown in this report). The transition between convex and concave region could not be mastered. A big challenge, is the choice of the right reference of rotation. \\
+
+
+
+
+
+
+  %%% Local Variables:
+  %%% mode: latex
+  %%% TeX-master: "../main"
+  %%% End:

@@ -1,0 +1,216 @@
+\appendix
+\subsection{Proof of Theorem 1} \label{sec:proof1}
+ %\textbf{Impenetrability}
+%Any coordinate transformation $\mathcal{E} \to \mathcal{C}:  \mathbb{R}^d \to \mathbb{R}^d$ which transforms a convex region in $\mathcal{X}_1^d \subset \mathcal{E}$ to a convex region in $\mathcal{X}_2^d \subset \mathcal{C}$, ensures that any vector starting and ending in the convex region $\dot \xi_{\mathcal{E}} \in \mathcal{X}_1$ will be contained in the convex region $\dot \xi_{\mathcal{C}} \in \mathcal{X}_2$, vise versa any vector outside the starting and ending outside will start and end outside this region.
+
+%The linear transformation with the stretching matrix $A$ and rotation matrix $R$, as well as the translation with $\xi_0$ keep the convex regions intact. As the velocity vector starts and stays outside the concave circle and will therefore stay that way for the transformation back to the ellipse space, while impenetrability is  given. \hfill $\blacksquare$ \vspace{1em}
+
+% The surface of the ellipse can be described as:
+% \begin{equation}
+%  \frac {{}_{e}\xi_1 ^ 2}{a^2} + \frac{{}_e\xi_2^2}{b^2} = 1
+% \end{equation}
+The subscript ${}_e (\cdot)$ declares that a variable is given in the ellipse reference frame (ERF).
+With the Jacobian of the level function of an ellipse described in (\ref{eq:levelEllipse}), a normal ${}_e \vec n_e (\xi)$ on the ellipse can be found:
+\begin{equation}
+  {}_e \vec{n}_{e} (\xi) =
+  \frac{1}{\sqrt{a_2^4 \cdot {}_e\xi_1^2 + a_1^4 \cdot{}_e \xi_2^2}}
+  \begin{bmatrix}
+    a_2^2 \cdot {}_e\xi_1 \\
+    a_1^2 \cdot {}_e\xi_2
+  \end{bmatrix}
+\end{equation}
+
+The unit tangent on the ellipse ${}_e\vec e_{e}$ is perpendicular to the normal, and can be written as:
+\begin{equation}
+  {}_e \vec{e}_{e} (\xi)=
+  \frac{1}{\sqrt{a_2^4 \cdot {}_e\xi_1^2 + a_1^4 \cdot{}_e \xi_2^2}}
+  \begin{bmatrix}
+    a_1^2 \cdot {}_e\xi_2 \\
+    - a_2^2 \cdot {}_e\xi_1
+  \end{bmatrix}
+\end{equation}
+
+Before the modulation is applied, the whole coordinate system is transformed, such that the ellipse lies on a unit circle, which is referred as circle reference frame (CRF) with the subscript ${}_c(\cdot)$:
+\begin{equation}
+  %{}_c \xi = A^{-1} {}_e \xi \quad \rightarrow \quad
+  {}_e \xi_1 (\xi) = a_1 \cdot {}_c\xi_1 \, , \;\; {}_e \xi_2 = a_2 \cdot {}_c\xi_2 \label{eq:ellipseCircleTrafo}
+\end{equation}
+%For a unit circle, the two axis have the same value, and are given by $r = a = b = 1$. \\
+% \begin{equation}
+%  \xi_1 ^ 2 + \xi_2^2 = 1
+% \end{equation}
+The normal ${}_c \vec n _{c} (\xi)$ of the unit circle in CRF can be evaluated similarly with the level function (\ref{eq:levelCircle})
+\begin{equation}
+  {}_c \vec{n}_{c} (\xi) =
+  \frac{1}{\sqrt{ {}_c\xi_1^2 + {}_c \xi_2^2}}
+  \begin{bmatrix}
+     {}_c\xi_1 \\
+     {}_c\xi_2
+  \end{bmatrix}
+\end{equation}
+
+and the tangent
+\begin{equation}
+  {}_c \vec{e}_{c} (\xi) =
+  \frac{1}{\sqrt{ {}_c\xi_1^2 + {}_c \xi_2^2}}
+  \begin{bmatrix}
+     {}_c\xi_2 \\
+     - {}_c\xi_1
+  \end{bmatrix}
+\end{equation}
+
+On the obstacle surface, the velocity needs to be solely in tangential direction. While this was shown for the circle, the proof has to be extended to the ellipse. For this, the tangent on the unit circle needs to be equal to the tangent of the ellipse, too. To evaluate this, the tangent on the unit circle in CRF is transformed to the ERF:
+\begin{equation}
+  {}_e \vec{e}_{c} (\xi) n= \begin{bmatrix} a_1 & 0 \\ 0 & a_2\end{bmatrix} \cdot {}_c \vec{e}_{c}
+   \qquad
+   {}_e \vec{e}_{c} = \frac{1}{\sqrt{a^2 \cdot {}_c\xi_2^2 + a_2^2 {}_c\xi_1^2}}
+  \begin{bmatrix}
+       a_1 \cdot {}_c\xi_2 \\
+     - a_2 \cdot {}_c\xi_1
+   \end{bmatrix}
+\end{equation}
+Furthermore, the coordinate transformation can be applied (Eq.~\ref{eq:ellipseCircleTrafo}) and leads to:
+\begin{equation}
+  {}_e \vec{e}_{c} (\xi) =
+  \frac{1}{\sqrt{a_2^4 \cdot {}_e\xi_1^2 + a^4 \cdot{}_e \xi_2^2}}
+  \begin{bmatrix}
+    a_1^2 \cdot {}_e\xi_2 \\
+    - a_2^2 \cdot {}_e\xi_1
+  \end{bmatrix}
+   =
+    {}_e \vec{e}_{e} (\xi)
+\end{equation}
+which is equal to the tangent on the ellipse in ellipse space. Projecting the velocity solely on the tangent in ellipse space is ensured and therefore impenetrability is guaranteed. \hfill $\blacksquare$ \\
+
+It is important to notice, that the normal on the circle transformed to the ERF ${}_e \vec n_{c} $ is not normal to the ellipse:
+\begin{equation}
+  {}_e\vec n_{c} (\xi)
+  =
+  \frac{1}{a_1 a_2\sqrt{ {}_e\xi_1^2 + {}_e \xi_2^2}}
+  \begin{bmatrix}
+     a_1 a_2 \cdot{}_e\xi_1 \\
+     a_1 a_2 \cdot {}_e\xi_2
+   \end{bmatrix}
+  \neq
+  {}_e\vec n_{e} (\xi)
+\end{equation}
+As a result of this, the normal and tangent of the CRF are not orthogonal in ERF, but linearly independent. Zero velocity in direction of the normal on the ellipse can still be ensured, because the normal on the ellipse ${}_e \vec n_{e} (\xi)$ is a linear combination of the normal on the circle in ERF (${}_e \vec n_{c} (\xi)$, ${}_e \vec e_{e}(\xi)$). As there is no velocity in direction of ${}_e \vec n_{c} (\xi) $ it is a trivial normal combination resulting in ${}_e \vec n_{e} (\xi)= 0$.
+
+
+
+
+\subsection{Proof of Theorem 2} \label{sec:proof2}
+The Neuman Boundary condition is met for a linearly independent $\hat{D} = [\hat n (\xi) \; e_1(\xi) ]$ base matrix with $e_1(\xi) $ the tangential hyper-plane and $\hat n$ a vector linearly independent (not necessarily the normal to the plane), if any velocity in direction of $\hat n(\xi)$ is removed for every point on the surface of a convex obstacle.
+
+For the two dimensional case, a pseudo-normal $\hat{ \vec n}$ is defined which is inclined at an angle of $\phi \in ]-\frac{\pi}{2}, \frac{\pi}{2}[$. It can be expressed as a linear combination of the normal $\vec n$ and the tangent $\vec e_1$:
+\begin{equation}
+\hat{ \vec n} (\xi) = \cos \phi \cdot \vec n (\xi) + \sin \phi \cdot \vec e_1 (\xi)
+\end{equation}
+
+For any point on the surface, it could be shown that $\xi \in \mathcal(X)^b$ the modulation ensures that the velocity in direction of the normal vanishes. For our case, this normal is replaces with the pseudo-normal. The Neuman boundary can be ensured:
+\begin{align}
+  \dot{\vec \xi} \cdot \vec n (\xi) &=  \dot{\vec \xi} \cdot \left(\frac{1}{\cos \phi} \hat{\vec n}(\xi) - \frac{\sin \phi}{\cos \phi} \vec{e}_1 (\xi) \right) \\
+  & = \left| \dot{\vec \xi}  \right| \cdot \left(\frac{\cos(\frac{\pi}{2}-\phi)}{\cos \phi} - \frac{\sin \phi}{\cos \phi}\right) = 0
+\end{align}
+Impenetrability is therefore given. \hfill $\blacksquare$
+
+
+
+\subsection{Proof of Theorem 3} \label{sec:proof3}
+The proof is evaluated for a two dimensional ellipse. Furthermore, without any loss of generalization, the obstacle is placed at the origin which results in $\xi^o = [0 \; : \; 0]^T$ and the linear attractor at a position $\xi^a = \begin{bmatrix} d_1 & d_2 \end{bmatrix}$ with $d_1 \in \mathbb{R}^\plus$ and $d_2 \in \mathbb{R}$. The DS for such a case is given as $f(\xi) = \begin{bmatrix} -(\xi_1-d_1) & -(\xi_2-d_2)\end{bmatrix}^T$.
+The components of the modulation matrix $\hat M$ of Sec.~\ref{sec:IFD}
+\begin{equation}
+  D(\xi) =
+  \begin{bmatrix}
+    \lambda_n(\tilde \xi) & 0 \\
+    0 & \lambda_1(\tilde \xi)
+  \end{bmatrix}
+  \qquad
+  \hat{E} (\xi) =
+  \begin{bmatrix}
+    \hat{\vec n } & \vec e_1
+  \end{bmatrix}
+\end{equation}
+where $\hat{\vec n} = \begin{bmatrix}$ \xi_1 & \xi_2 \end{bmatrix} and $\vec e_1 = \begin{bmatrix} a_1^2 \xi_1 & a_2^2 \xi_2 \end{bmatrix}$.\\
+\begin{align}
+  \hat M ( \xi) &= \hat{E}(\xi) D(\xi) \hat{E}(\xi) %\\
+  %               & = \frac{1}{a^2_2 \xi_1^2 + a_1^2 \xi_2^2} \cdot \\
+  % & \cdot
+  % \begin{bmatrix}
+  %   a_2^2 \xi_1^2 \lambda_n(\tilde \xi) + a_1^2 \xi_2^2 \lambda_{e1}(\tilde \xi)   & \xi_1\xi_2 (a_1^2 \lambda_n(\tilde \xi) + a_2^2 \lambda_{e1}(\tilde \xi) ) \\
+  %   \xi_1\xi_2 (a_2^2 \lambda_n(\tilde \xi) + a_1^2 \lambda_{e1}(\tilde \xi) ) & a_1^2 \xi_1^2 \lambda_n(\tilde \xi) + a_2^2 \xi_2^2 \lambda_{e1}(\tilde \xi)
+  % \end{bmatrix}
+\end{align}
+It can be observed that there is one trajectory that converges to a saddle point on the obstacles surfaces,  which is given by $\xi_2 = 0$. The property of the original dynamics of this trajectory defined by $\mathcal{X}^S = \{\xi \in \mathbb{R}^2 \}$. It has the property, that there is only a velocity part in direction of $\hat \vec{n}$ but none in tangential direction of the surface. \\
+To ensure that no local minima exists, it need to be shown thath all other trajectories converge to the global attractor. This is done by showing, that any trajectory above (greater y direction) this saddle point trajectory $\mathcal{X}^S$ turns in the mathematical positive sens and and trajectory below turns in the opposite direction. They therefore avoid converging to the saddle point.\\
+
+The modulated DS is given by:
+\begin{align}
+  \dot{\xi} &= \hat{M}(\xi) \cdot f(\xi)
+  % \begin{pmatrix}
+  %    \lambda_n(\tilde \xi) (-a_2^2 \xi_1^3 + a_2^2 d \xi_1^2 - a_1^2 \xi_1 \xi_2^2) +   \lambda_{e1}(\tilde \xi) a_1^2 d \xi_2^2 \\
+  %    \lambda_n(\tilde \xi) (-a_2^2 \xi_1^2 \xi_2 + a_2^2 d \xi_1 \xi_2 - a_1^2 \xi_2^3) +   \lambda_{e1}(\tilde \xi) a_2^2 d \xi_1 \xi_2
+  %\end{pmatrix}
+\end{align}
+
+The cross product in two defined as $\vec a \times \vec b = \Vert \vec a \Vert \Vert \vec b \Vert \sin \theta \cdot$, where $\theta$ is the relative rotation of $\vec b$ towards $\vec a$ in positive direction around normal of the two vectors. Because any point above the centerline $\mathacl{X}^c$ as give in (\ref{eq:centerLine}) and behind the obstacle ($\xi_1 \leq 0$), needs to rotate in the mathematical positive sense to move away from the center line and not create a local minimum on the obstacle. This can be expressed as:
+\begin{align}
+  &f(\xi) \times \dot \xi > 0 &\xi \in \{\xi \in \mathbb{R}^2: \xi_1 \leq 0,\; \xi_2 > \frac{d_2 \xi_1}{d_1}  \} \label{eq:condition_noMimima} \\
+  &f(\xi) \times \dot \xi < 0 &\xi \in  \{\xi \in \mathbb{R}^2: \xi_1 \leq 0,\; \xi_2 < \frac{d_2 \xi_1}{d_1}  \} \label{eq:condition_noMimima2}
+  %&f(\xi) \times \dot \xi < 0 &\mathcal{X}^{3} = \{\xi \in \mathbb{R}^2: \xi_1 \leq 0,\; y < 0 \}
+\end{align}
+
+The cross product is evaluated as:
+\begin{equation} \label{eq:crossProduct}
+  \begin{split}
+  f(\xi) \times \dot \xi =&  \left( \lambda_n(\tilde \xi) - \lambda_{1}(\tilde \xi) \right) \frac{d_1\xi_2 - d_2 \xi_1}{a_2^2 \xi_1^2 + a_1^2 \xi_2^2} \cdot \\
+  & \left(a_1^2\xi_2(\xi_2 - d_2) + a_2^2 \xi_1 (\xi_1 - d_1)  \right)
+  % \left( \lambda_n(\tilde \xi) - \lambda_{e1}(\tilde \xi) \right) \left( d a_2^2 \xi_1^2 \xi_2 - a_2^2 d^2 \xi_1 \xi_2 + a_1^2 d \xi_2^2 \right)
+  \end{split}
+\end{equation}
+
+First we try to show, that vector $f(\xi)$ above the centerline is rotated clockwise as described in (\ref{eq:condition_noMimima})
+The second factor in (\ref{eq:crossProduct}) can be evaluated with the condition from of being above the centerline ($\xi_2 > \frac{d_2 \xi_1}{d_1}$) as:
+\begin{equation}
+ \frac{d_1\xi_2 - d_2 \xi_1}{a_2^2 \xi_1^2 + a_1^2 \xi_2^2} > 0
+\end{equation}
+Further more, with the condition of being above the centerline ($d_2 < \frac{d_1}{\xi_1} \xi_2$) and only considering points on the left hand side ($\xi_1 \leq 0$), the first part of the third factor in (\ref{eq:crossProduct}) can be observed in the three different regions of: \\
+In the top half of the coordinate system with $\xi_2 > 0$, it follows:
+\begin{equation}
+  a_1^2\xi_2(\xi_2 - d_2) > a_1^2\xi_2(\xi_2 - \xi_2 \frac{d_1}{\xi_1}) = a_1^2 \xi_2^2(1+\frac{d_1}{\| \xi_1\|}) \geq 0
+\end{equation}
+Similarly in the bottom half of the coordinate system with $\xi_2 < 0$ it can be seen:
+\begin{equation}
+a_1^2\xi_2(\xi_2 - d_2) > a_1^2 \frac{\xi_1}{d_1}d_2(\frac{\xi_1}{d_1}d_2 - d_2) = a_1^2 \xi_2^2(1+\frac{d_1}{\| \xi_1\|}) \geq 0
+\end{equation}
+And on the separating axis with $\xi_2 = 0$, the therm results as:
+\begin{equation}
+a_1^2\xi_2(\xi_2 - d_2) = 0  \quad \text{if}
+\end{equation}
+
+Moreover, by only observing the left hand side of the ellipse ($\xi_1 < 0$) and having the attractor on the right hand side ($d_1 > 0$), the second part of the third factor of (\ref{eq:crossProduct}) can be  evaluated as:
+\begin{equation}
+  a_2^2 \xi_1 (\xi_1 - d_1)  > 0
+\end{equation}
+Having additionally the condition on the eigenvalues that $ \lambda_n(\tilde \xi) - \lambda_{1}(\tilde \xi) > 0$ the first factor is positive, too. Having only positive factors in (\ref{eq:crossProduct}), the inequality in (\ref{eq:condition_noMimima}) is shown to be true.
+
+
+When evaluating for points below the centerline as stated in (\ref{eq:condition_noMimima2}), only the second product changes sign:
+\begin{equation}
+\frac{d_1\xi_2 - d_2 \xi_1}{a_2^2 \xi_1^2 + a_1^2 \xi_2^2} < 0
+\end{equation}
+The resulting crossproduct in (\ref{eq:crossProduct}) is therefore negative. Finally, it can be concluded that any point above the centerline turns in positive direction, while any point below turns in negative direction. \\
+\hfill $\blacksquare$
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:

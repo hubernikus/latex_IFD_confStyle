@@ -1,28 +1,28 @@
 
 ;; ----- smex-history -----
 (
- whitespace-mode
- whitespace-cleanup
- replace-string
- ethio-replace-space
  comment-region
+ replace-string
+ whitespace-mode
+ compile
+ rename-uniquely
  uncomment-region
  shell
 )
 
 ;; ----- smex-data -----
 (
- (compile . 5)
+ (compile . 6)
  (electric-indent-mode . 5)
  (auto-fill-mode . 3)
  (tex-compile . 1)
- (comment-region . 31)
+ (comment-region . 80)
  (replace-regexp . 1)
- (replace-string . 31)
- (uncomment-region . 8)
- (whitespace-mode . 132)
+ (replace-string . 87)
+ (uncomment-region . 15)
+ (whitespace-mode . 192)
  (calc-select-once-maybe . 1)
- (where-is . 2)
+ (where-is . 3)
  (which-key-enable-god-mode-support . 3)
  (whois . 1)
  (shell . 6)
@@ -30,9 +30,13 @@
  (strokes-help . 2)
  (whitespace-toggle-options . 1)
  (c-mode . 2)
- (inferior-python-mode . 20)
+ (inferior-python-mode . 41)
  (undo-tree-switch-branch . 6)
  (ethio-replace-space . 1)
  (whitespace-cleanup . 2)
- (python-menu . 1)
+ (python-menu . 2)
+ (completion-help-at-point . 1)
+ (downcase-region . 2)
+ (subword-mark . 1)
+ (rename-uniquely . 1)
 )
